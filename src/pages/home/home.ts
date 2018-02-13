@@ -18,6 +18,7 @@ export class HomePage {
   id:Number;
   id_warga: Number;
   app_id: String;
+  home_menu:string
 
   constructor(public platform: Platform, public navCtrl: NavController,public storage: Storage,
     public homeservice:HomeserviceProvider,public alertCtrl: AlertController,public oneSignal: OneSignal,
@@ -58,8 +59,27 @@ export class HomePage {
       message: 'Silahkan Periksa koneksi internet anda...',
     });
     loadingdata.present();
+          //Tampilkan data dari server
+      this.homeservice.tampilkanhome().subscribe(
+        //Jika data sudah berhasil di load
+        (data:HomeArray[])=>{
+          this.items=data;
+        },
+        //Jika Error
+        function (error){  
+          //Jika Koneksi Tidak ada
+          if(error.status == 0){
+            info.present();
+          }
+          loadingdata.dismiss(); 
+        },
+        //Tutup Loading
+        function(){
+          loadingdata.dismiss();
+        }
+      );
     //Ambil data ID dari storage
-    this.storage.get('id_desa').then((iddesa) => {
+    /*this.storage.get('id_desa').then((iddesa) => {
       //Tampilkan data dari server
       this.homeservice.tampilkanusulanbaru(iddesa).subscribe(
         //Jika data sudah berhasil di load
@@ -79,7 +99,11 @@ export class HomePage {
           loadingdata.dismiss();
         }
       );
-    });
+    });*/
   }
   
+ionViewWillEnter(){
+  this.home_menu = "kependudukan"
+  }
+
 }

@@ -23,14 +23,21 @@ export class HomeserviceProvider {
   //Memanggil URL Api
   private url:string="http://forkomperbekelbali.com/desa/public/api/perangkat";
   private url2:string="http://forkomperbekelbali.com/desa/public/api/usulanbaru";
+  private awal:string="http://forkomperbekelbali.com/desa/public/api/halamanawal";
   constructor(public _http: Http) {
   }
-    //Tampilkan usulan
-    tampilkanusulanbaru(iddesa)
+    //Tampilkan home
+    tampilkanhome()
     {
-     return this._http.get(this.url2+"/"+iddesa)
-     .map((response:Response)=>response.json());
+      return this._http.get(this.awal)
+      .map((response:Response)=>response.json());
     }
+    //Tampilkan usulan
+  tampilkanusulanbaru(iddesa)
+  {
+    return this._http.get(this.url2+"/"+iddesa)
+    .map((response:Response)=>response.json());
+  }
   //Cek + Tambah perangkat
   tambahperangkat(item:HomeArray){
     let body = JSON.stringify(item);

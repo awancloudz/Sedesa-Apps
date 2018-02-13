@@ -55,15 +55,15 @@ export class MyApp {
     ];
     this.pages_umum = [
       { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage },
-      { title: 'Wisata', icon: "map-signs", color: "iconprimary" ,  component: '' },
-      { title: 'Kuliner', icon: "coffee", color: "iconprimary" ,  component: '' },
-      { title: 'Event', icon: "ticket", color: "iconprimary" ,  component: '' },
-      { title: 'Berita', icon: "list", color: "iconprimary" ,  component: '' },
+      { title: 'Wisata', icon: "tree", color: "iconprimary" ,  component: '' },
+      { title: 'Kuliner', icon: "cutlery", color: "iconprimary" ,  component: '' },
+      { title: 'Event', icon: "calendar", color: "iconprimary" ,  component: '' },
+      { title: 'Berita', icon: "newspaper-o", color: "iconprimary" ,  component: '' },
       { title: 'Karir', icon: "briefcase", color: "iconprimary" ,  component: '' },
-      { title: 'Info Harga', icon: "tags", color: "iconprimary" ,  component: '' },
+      { title: 'Info Harga', icon: "area-chart", color: "iconprimary" ,  component: '' },
       { title: 'Usulan', icon: "edit", color: "iconprimary", component: '' },
-      { title: 'Pengaduan', icon: "eye", color: "iconprimary", component: '' },
-      { title: 'Layanan', icon: "exchange", color: "iconprimary", component: '' },
+      { title: 'Pengaduan', icon: "list-alt", color: "iconprimary", component: '' },
+      { title: 'Layanan', icon: "slideshare", color: "iconprimary", component: '' },
     ];
     this.pages_warga = [
       { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage },

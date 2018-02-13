@@ -8,6 +8,11 @@
 </ion-header>
 
 <ion-content padding>
+  <!--
+  <div *ngFor="let item of items.daftarinformasi;">{{ item.judul}}</div>
+  
+  <div *ngFor="let item of items.daftarkategori;">{{ item.namakategori}}</div>
+  
   <ion-item><b>Usulan Warga Terbaru</b></ion-item>
   <div *ngFor="let item2 of items2.koleksi; let i=index; let l=last;">
   <ion-card class="adv-map" *ngIf="l == true">
@@ -40,5 +45,136 @@
       </button>
     </ion-item>
   </ion-card>
-  </div>
+  </div>-->
+
+
+  
+<ion-slides class="desa-home-slide" pager="true" autoplay="2500" loop="true" initialslide="5">
+
+  <ion-slide style="background-color: green">
+    <h2>Slide 1</h2>
+  </ion-slide>
+  
+  <ion-slide style="background-color: blue">
+    <h2>Slide 2</h2>
+  </ion-slide>
+  
+  <ion-slide style="background-color: red">
+    <h2>Slide 3</h2>
+  </ion-slide>
+  
+  <ion-slide style="background-color: rgb(208, 255, 0)">
+    <h2>Slide 4</h2>
+  </ion-slide>
+  
+  <ion-slide style="background-color: rgb(0, 255, 242)">
+    <h2>Slide 5</h2>
+  </ion-slide>
+  
+</ion-slides>
+  
+<div>
+  <ion-segment [(ngModel)]="home_menu" style="margin-top: 5px">
+    <ion-segment-button value="kependudukan" style="text-transform: none ; font-size: 15px">
+      Kependudukan
+    </ion-segment-button>
+
+    <ion-segment-button value="informasi" style="text-transform: none ; font-size: 15px">
+      Informasi
+    </ion-segment-button>
+  </ion-segment>
+</div>
+  
+<div [ngSwitch]="home_menu">
+  <ion-list *ngSwitchCase="'kependudukan'">
+    <ion-row style="margin-left: -15px">
+      <ion-col style="margin-right: -20px">
+        <ion-card class="menu_card">
+          <ion-buttons>
+            <img src="usulan.png" class="menu_icon">
+              <p class="menu_title">Usulan</p>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col style="margin-right: -20px">
+        <ion-card class="menu_card">
+          <ion-buttons>
+            <img src="pengaduan.png" class="menu_icon">
+            <p class="menu_title">Pengaduan</p>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+
+      <ion-col style="margin-right: -20px">
+        <ion-buttons>
+          <ion-card class="menu_card">
+            <img src="layanan.png" class="menu_icon">
+            <p class="menu_title">Layanan</p>
+          </ion-card>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+        
+  <ion-list *ngSwitchCase="'informasi'">
+    <ion-row style="margin-left: -15px">
+      <ion-col style="margin-right: -20px">
+        <ion-card class="menu_card">
+          <ion-buttons>
+            <img src="pariwisata.png" class="menu_icon">
+            <p class="menu_title">Pariwisata</p>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col style="margin-right: -20px">
+        <ion-card class="menu_card">
+          <ion-buttons>
+            <img src="kuliner.png" class="menu_icon">
+            <p class="menu_title">Kuliner</p>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col style="margin-right: -20px">
+        <ion-card class="menu_card">
+          <ion-buttons>
+            <img src="berita.png" class="menu_icon">
+            <p class="menu_title">Berita</p>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row style="margin-left: -15px ; margin-top: -15px">
+      <ion-col style="margin-right: -20px">
+        <ion-card class="menu_card">
+          <ion-buttons>
+            <img src="event.png" class="menu_icon">
+            <p class="menu_title">Event</p>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col style="margin-right: -20px">
+        <ion-card class="menu_card">
+          <ion-buttons>
+            <img src="karir.png" class="menu_icon">
+            <p class="menu_title">Karir</p>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col style="margin-right: -20px">
+        <ion-card class="menu_card">
+          <ion-buttons>
+            <img src="info_harga.png" class="menu_icon">
+            <p class="menu_title">Info Harga</p>
+          </ion-buttons>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</div>
 </ion-content>
