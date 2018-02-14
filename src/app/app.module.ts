@@ -18,6 +18,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 // Mengambil SEMUA halaman yg sudah dibuat
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { InformasiPage } from '../pages/informasi/informasi';
 import { UsulanPage,UsulandetailPage,UsulancreatePage,UsulaneditPage } from '../pages/usulan/usulan';
 import { UsulanDusunPage,UsulanDusundetailPage } from '../pages/usulandusun/usulandusun';
 import { BeritaPage,BeritaDusunPage,BeritaDetailPage } from '../pages/berita/berita';
@@ -51,11 +52,12 @@ import { SettingPageModule } from '../pages/setting/setting.module';
 import { ProfildesaPageModule } from '../pages/profildesa/profildesa.module';
 import { LocationSelectPageModule } from '../pages/location-select/location-select.module';
 import { BelanjaPageModule } from '../pages/belanja/belanja.module';
+import { InformasiPageModule } from '../pages/informasi/informasi.module';
 import { PengaduanserviceProvider } from '../providers/pengaduanservice/pengaduanservice';
 import { AntrianserviceProvider } from '../providers/antrianservice/antrianservice';
 import { HomeserviceProvider } from '../providers/homeservice/homeservice';
 import { UsulandusunserviceProvider } from '../providers/usulandusunservice/usulandusunservice';
-import { KategoriserviceProvider } from '../providers/kategoriservice/kategoriservice';
+import { InformasiserviceProvider } from '../providers/informasiservice/informasiservice';
 
 @NgModule({
   //Deklarasi variabel page
@@ -88,7 +90,8 @@ import { KategoriserviceProvider } from '../providers/kategoriservice/kategorise
     PengaduanPageModule,
     AntrianPageModule,
     LocationSelectPageModule,
-    BelanjaPageModule
+    BelanjaPageModule,
+    InformasiPageModule,
   ],
   bootstrap: [IonicApp],
   //Komponen Aplikasi
@@ -135,7 +138,7 @@ import { KategoriserviceProvider } from '../providers/kategoriservice/kategorise
     OneSignal,
     HomeserviceProvider,
     UsulandusunserviceProvider,
-    KategoriserviceProvider,                    
+    InformasiserviceProvider,                   
   ]
 })
 export class AppModule {}

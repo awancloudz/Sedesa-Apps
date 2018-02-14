@@ -49,28 +49,12 @@
 
 
   
-<ion-slides class="desa-home-slide" pager="true" autoplay="2500" loop="true" initialslide="5">
+<ion-slides class="desa-home-slide">
 
-  <ion-slide style="background-color: green">
-    <h2>Slide 1</h2>
-  </ion-slide>
-  
-  <ion-slide style="background-color: blue">
-    <h2>Slide 2</h2>
-  </ion-slide>
-  
-  <ion-slide style="background-color: red">
-    <h2>Slide 3</h2>
-  </ion-slide>
-  
-  <ion-slide style="background-color: rgb(208, 255, 0)">
-    <h2>Slide 4</h2>
-  </ion-slide>
-  
-  <ion-slide style="background-color: rgb(0, 255, 242)">
-    <h2>Slide 5</h2>
-  </ion-slide>
-  
+  <ion-slide *ngFor="let item of items.daftarinformasi; let id = index">
+    <img src="http://forkomperbekelbali.com/desa/public/fotoupload/{{ item.foto }}" class="slide-image" style="height: 70vh; width: auto; margin: auto; display: block;"/>
+   </ion-slide>
+
 </ion-slides>
   
 <div>
@@ -119,60 +103,60 @@
         
   <ion-list *ngSwitchCase="'informasi'">
     <ion-row style="margin-left: -15px">
-      <ion-col style="margin-right: -20px">
+      <ion-col style="margin-right: -20px" (click)="tb_wisata()">
+        <ion-buttons>
         <ion-card class="menu_card">
-          <ion-buttons>
-            <img src="pariwisata.png" class="menu_icon">
-            <p class="menu_title">Pariwisata</p>
-          </ion-buttons>
+          <img src="pariwisata.png" class="menu_icon">
+          <p class="menu_title">Pariwisata</p>
         </ion-card>
+      </ion-buttons>
       </ion-col>
   
-      <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
+      <ion-col style="margin-right: -20px" (click)="tb_kuliner()">
+        <ion-buttons>
+          <ion-card class="menu_card">
             <img src="kuliner.png" class="menu_icon">
             <p class="menu_title">Kuliner</p>
-          </ion-buttons>
-        </ion-card>
+          </ion-card>
+        </ion-buttons>
       </ion-col>
   
-      <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
+      <ion-col style="margin-right: -20px" (click)="tb_berita()">
+        <ion-buttons>
+          <ion-card class="menu_card">
             <img src="berita.png" class="menu_icon">
             <p class="menu_title">Berita</p>
-          </ion-buttons>
-        </ion-card>
+          </ion-card>
+        </ion-buttons>
       </ion-col>
     </ion-row>
   
-    <ion-row style="margin-left: -15px ; margin-top: -15px">
+    <ion-row style="margin-left: -15px ; margin-top: -15px" (click)="tb_event()">
       <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
+        <ion-buttons>
+          <ion-card class="menu_card">
             <img src="event.png" class="menu_icon">
             <p class="menu_title">Event</p>
-          </ion-buttons>
-        </ion-card>
+          </ion-card>
+        </ion-buttons>
       </ion-col>
   
-      <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
+      <ion-col style="margin-right: -20px" (click)="tb_investasi()">
+        <ion-buttons>
+          <ion-card class="menu_card">
             <img src="karir.png" class="menu_icon">
-            <p class="menu_title">Karir</p>
-          </ion-buttons>
-        </ion-card>
+            <p class="menu_title">Investasi</p>
+          </ion-card>
+        </ion-buttons>
       </ion-col>
   
-      <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
-            <img src="info_harga.png" class="menu_icon">
-            <p class="menu_title">Info Harga</p>
-          </ion-buttons>
-        </ion-card>
+      <ion-col style="margin-right: -20px" (click)="tb_harga()">
+        <ion-buttons>
+          <ion-card class="menu_card">
+              <img src="info_harga.png" class="menu_icon">
+              <p class="menu_title">Info Harga</p>
+          </ion-card>
+        </ion-buttons>
       </ion-col>
     </ion-row>
   </ion-list>

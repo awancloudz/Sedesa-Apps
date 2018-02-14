@@ -27,11 +27,11 @@ export class HomeserviceProvider {
   constructor(public _http: Http) {
   }
     //Tampilkan home
-    tampilkanhome()
+  tampilkanhome()
     {
       return this._http.get(this.awal)
       .map((response:Response)=>response.json());
-    }
+  }
     //Tampilkan usulan
   tampilkanusulanbaru(iddesa)
   {

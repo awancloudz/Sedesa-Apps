@@ -1,25 +1,31 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
 import { NavController,AlertController,Platform,LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { OneSignal } from '@ionic-native/onesignal';
+import { Slides } from 'ionic-angular';
 //Tambahkan Provider
 import { HomeserviceProvider } from '../../providers/homeservice/homeservice';
 //Tambahkan Variabel Global
 import { HomeArray } from '../../pages/home/homearray';
 import { UsulanArray } from '../../pages/usulan/usulanarray';
+import { InformasiPage } from '../informasi/informasi';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  entryComponents:[ InformasiPage ],
 })
+
 export class HomePage {
+  @ViewChild(Slides) slides: Slides;
+
   items:HomeArray[]=[];
   items2:UsulanArray[]=[];
   id:Number;
   id_warga: Number;
   app_id: String;
   home_menu:string
-
+  
   constructor(public platform: Platform, public navCtrl: NavController,public storage: Storage,
     public homeservice:HomeserviceProvider,public alertCtrl: AlertController,public oneSignal: OneSignal,
     public loadincontroller:LoadingController) {
@@ -101,9 +107,40 @@ export class HomePage {
       );
     });*/
   }
-  
+ngAfterViewInit(){
+  //Setting Slides
+  setTimeout(()=>{
+    //if(this.items && this.items.length > 0){
+        this.slides.freeMode = true;
+        this.slides.pager = true;
+        this.slides.autoplay = 2500;
+        this.slides.speed = 1000;
+        this.slides.loop = true;
+        this.slides.initialSlide = 5;
+        this.slides.startAutoplay()
+     //}
+  },1000)
+}
 ionViewWillEnter(){
   this.home_menu = "kependudukan"
-  }
+}
 
+tb_wisata(){
+  this.navCtrl.push(InformasiPage, { item: 1 });
+}
+tb_berita(){
+  this.navCtrl.push(InformasiPage, { item: 2 });
+}
+tb_event(){
+  this.navCtrl.push(InformasiPage, { item: 3 });
+}
+tb_kuliner(){
+  this.navCtrl.push(InformasiPage, { item: 4});
+}
+tb_investasi(){
+  this.navCtrl.push(InformasiPage, { item: 5 });
+}
+tb_harga(){
+  this.navCtrl.push(InformasiPage, { item: 6 });
+}
 }
