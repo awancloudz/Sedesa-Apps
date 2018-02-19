@@ -128,19 +128,20 @@ ionViewWillEnter(){
 tb_wisata(){
   this.navCtrl.push(InformasiPage, { item: 1 });
 }
-tb_berita(){
+tb_kuliner(){
   this.navCtrl.push(InformasiPage, { item: 2 });
 }
+
 tb_event(){
-  this.navCtrl.push(InformasiPage, { item: 3 });
+  this.navCtrl.push(InformasiPage, { item: 3});
 }
-tb_kuliner(){
+tb_berita(){
   this.navCtrl.push(InformasiPage, { item: 4});
 }
 tb_investasi(){
-  this.navCtrl.push(InformasiPage, { item: 5 });
+  this.navCtrl.push(InformasiPage, { item: 5});
 }
 tb_harga(){
-  this.navCtrl.push(InformasiPage, { item: 6 });
+  this.navCtrl.push(InformasiPage, { item: 6});
 }
 }

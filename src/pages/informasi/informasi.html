@@ -30,7 +30,7 @@
           </ion-thumbnail>
           <h2>{{ item.judul }}</h2>
           <p>{{ item.warga.nama }} • {{ item.tanggal }}</p>
-          <button ion-button clear item-end>View</button>
+          <button ion-button clear item-end (click)="detailinformasi(item)">View</button>
         </ion-item>
   </ion-list>
 </ion-content>

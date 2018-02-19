@@ -22,9 +22,14 @@ export class InformasiserviceProvider {
   constructor(public _http: Http) {
     
   }
-  tampilkaninformasi()
+  tampilkaninformasi(item)
   {
-      return this._http.get(this.url)
+      return this._http.get(this.url+"/"+item)
+      .map((response:Response)=>response.json());
+  }
+  detailinformasi(item)
+  {
+      return this._http.get(this.url+"/detail/"+item)
       .map((response:Response)=>response.json());
   }
 }

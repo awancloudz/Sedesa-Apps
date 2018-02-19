@@ -18,7 +18,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 // Mengambil SEMUA halaman yg sudah dibuat
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { InformasiPage } from '../pages/informasi/informasi';
+import { InformasiPage,DetailInformasiPage } from '../pages/informasi/informasi';
 import { UsulanPage,UsulandetailPage,UsulancreatePage,UsulaneditPage } from '../pages/usulan/usulan';
 import { UsulanDusunPage,UsulanDusundetailPage } from '../pages/usulandusun/usulandusun';
 import { BeritaPage,BeritaDusunPage,BeritaDetailPage } from '../pages/berita/berita';
@@ -98,6 +98,7 @@ import { InformasiserviceProvider } from '../providers/informasiservice/informas
   entryComponents: [
     MyApp,
     HomePage,
+    InformasiPage,DetailInformasiPage,
     UsulanPage,
     UsulandetailPage,
     UsulancreatePage,

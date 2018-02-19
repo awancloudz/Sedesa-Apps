@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <!--
   <div *ngFor="let item of items.daftarinformasi;">{{ item.judul}}</div>
   
@@ -57,8 +57,8 @@
 
 </ion-slides>
   
-<div>
-  <ion-segment [(ngModel)]="home_menu" style="margin-top: 5px">
+<div padding>
+  <ion-segment [(ngModel)]="home_menu" style="margin-top: -15px">
     <ion-segment-button value="kependudukan" style="text-transform: none ; font-size: 15px">
       Kependudukan
     </ion-segment-button>
@@ -69,9 +69,9 @@
   </ion-segment>
 </div>
   
-<div [ngSwitch]="home_menu">
+<div padding [ngSwitch]="home_menu">
   <ion-list *ngSwitchCase="'kependudukan'">
-    <ion-row style="margin-left: -15px">
+    <ion-row style="margin-left: -15px ; margin-top: -30px">
       <ion-col style="margin-right: -20px">
         <ion-card class="menu_card">
           <ion-buttons>
@@ -90,7 +90,7 @@
         </ion-card>
       </ion-col>
 
-      <ion-col style="margin-right: -20px">
+      <ion-col style="margin-right: -17px">
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="layanan.png" class="menu_icon">
@@ -102,7 +102,7 @@
   </ion-list>
         
   <ion-list *ngSwitchCase="'informasi'">
-    <ion-row style="margin-left: -15px">
+    <ion-row style="margin-left: -15px ; margin-top: -30px">
       <ion-col style="margin-right: -20px" (click)="tb_wisata()">
         <ion-buttons>
         <ion-card class="menu_card">
@@ -121,7 +121,7 @@
         </ion-buttons>
       </ion-col>
   
-      <ion-col style="margin-right: -20px" (click)="tb_berita()">
+      <ion-col style="margin-right: -17px" (click)="tb_berita()">
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="berita.png" class="menu_icon">
@@ -144,13 +144,13 @@
       <ion-col style="margin-right: -20px" (click)="tb_investasi()">
         <ion-buttons>
           <ion-card class="menu_card">
-            <img src="karir.png" class="menu_icon">
+            <img src="investasi.png" class="menu_icon">
             <p class="menu_title">Investasi</p>
           </ion-card>
         </ion-buttons>
       </ion-col>
   
-      <ion-col style="margin-right: -20px" (click)="tb_harga()">
+      <ion-col style="margin-right: -17px" (click)="tb_harga()">
         <ion-buttons>
           <ion-card class="menu_card">
               <img src="info_harga.png" class="menu_icon">
