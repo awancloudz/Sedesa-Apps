@@ -23,10 +23,17 @@
       refreshingText="Refreshing..">
     </ion-refresher-content>
     </ion-refresher>
-    <ion-list>
-        <ion-item>
-            <h2>{{ item.judul }}</h2>
-            <p>{{ item.warga.nama }} • {{ item.tanggal }}</p>
-        </ion-item>
-    </ion-list>
+    <div padding>
+      <p style="font-size: 26px ; margin-top: -5px"><b>{{ item.judul }}</b></p>
+      <p style="font-size: 12px ; margin-top: -23px">{{ item.tanggal }}</p>
+      <p style="font-size: 12px ; margin-top: -8px">{{ item.warga.nama }}</p>
+    </div>
+      
+    <div>
+        <img src="http://forkomperbekelbali.com/desa/public/fotoupload/{{ item.foto }}" style="height: 50% ; width: 100%">
+    </div>
+
+    <div padding>
+        <p>{{ item.isipost }}</p>
+    </div>
   </ion-content>

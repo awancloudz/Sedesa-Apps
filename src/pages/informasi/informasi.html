@@ -23,7 +23,23 @@
     refreshingText="Refreshing..">
   </ion-refresher-content>
   </ion-refresher>
-  <ion-list *ngFor="let item of items">
+  <ion-list style="margin-left: -10px" *ngFor="let item of items">
+    <ion-item (click)="detailinformasi(item)">
+      <ion-row>
+        <ion-col style="max-width: 100px ; max-height: 100px">
+          <img src="http://forkomperbekelbali.com/desa/public/fotoupload/{{ item.foto }}" alt="Poster" style="height: 100px ; max-width: 100px">
+        </ion-col>
+
+        <ion-col style="white-space: normal ; padding-left: 15px">
+          <p style="font-size: 14px"><b>{{ item.judul }}</b></p>
+          <p style="font-size: 12px">{{ item.warga.nama }}</p>
+          <p style="font-size: 12px">{{ item.tanggal }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+
+  <!--<ion-list *ngFor="let item of items">
       <ion-item>
           <ion-thumbnail item-start>
             <img src="http://forkomperbekelbali.com/desa/public/fotoupload/{{ item.foto }}">
@@ -32,5 +48,5 @@
           <p>{{ item.warga.nama }} • {{ item.tanggal }}</p>
           <button ion-button clear item-end (click)="detailinformasi(item)">View</button>
         </ion-item>
-  </ion-list>
+  </ion-list>-->
 </ion-content>
