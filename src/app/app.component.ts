@@ -17,6 +17,7 @@ import { PengaduanPage} from '../pages/pengaduan/pengaduan';
 import { AntrianPage} from '../pages/antrian/antrian';
 import { LocationSelectPage } from '../pages/location-select/location-select';
 import { BelanjaPage } from '../pages/belanja/belanja';
+import { InformasiPage } from '../pages/informasi/informasi';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +30,7 @@ export class MyApp {
   level = "umum";
   //Tipe Variable untuk tombol menu
   pages_login: Array<{title: string, icon: string, color: any,component: any}>;
-  pages_umum: Array<{title: string, icon: string, color: any,component: any}>;
+  pages_umum: Array<{title: string, icon: string, color: any,component: any,item: any}>;
   pages_warga: Array<{title: string, icon: string, color: any,component: any}>;
   pages_dusun: Array<{title: string, icon: string, color: any,component: any}>;
   warga: Array<{nama: string}>;
@@ -54,16 +55,16 @@ export class MyApp {
       { title: 'Login/Daftar',  icon: "sign-in", color: "iconprimary", component: LoginPage },
     ];
     this.pages_umum = [
-      { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage },
-      { title: 'Wisata', icon: "tree", color: "iconprimary" ,  component: '' },
-      { title: 'Kuliner', icon: "cutlery", color: "iconprimary" ,  component: '' },
-      { title: 'Event', icon: "calendar", color: "iconprimary" ,  component: '' },
-      { title: 'Berita', icon: "newspaper-o", color: "iconprimary" ,  component: '' },
-      { title: 'Investasi', icon: "line-chart", color: "iconprimary" ,  component: '' },
-      { title: 'Info Harga', icon: "tags", color: "iconprimary" ,  component: '' },
-      { title: 'Usulan', icon: "edit", color: "iconprimary", component: '' },
-      { title: 'Pengaduan', icon: "list-alt", color: "iconprimary", component: '' },
-      { title: 'Layanan', icon: "slideshare", color: "iconprimary", component: '' },
+      { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage, item: '' },
+      { title: 'Wisata', icon: "tree", color: "iconprimary" ,  component: InformasiPage, item: 1},
+      { title: 'Kuliner', icon: "cutlery", color: "iconprimary" ,  component: InformasiPage, item: 2},
+      { title: 'Event', icon: "calendar", color: "iconprimary" ,  component: InformasiPage, item: 3},
+      { title: 'Berita', icon: "newspaper-o", color: "iconprimary" ,  component: InformasiPage, item: 4},
+      { title: 'Investasi', icon: "line-chart", color: "iconprimary" ,  component: InformasiPage, item: 5},
+      { title: 'Info Harga', icon: "tags", color: "iconprimary" ,  component: InformasiPage, item: 6},
+      { title: 'Usulan', icon: "edit", color: "iconprimary", component: '', item: '' },
+      { title: 'Pengaduan', icon: "list-alt", color: "iconprimary", component: '', item: '' },
+      { title: 'Layanan', icon: "slideshare", color: "iconprimary", component: '', item: ''},
     ];
     this.pages_warga = [
       { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage },
@@ -118,7 +119,7 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.setRoot(page.component,{item: page.item});
   }
 
   login(){
