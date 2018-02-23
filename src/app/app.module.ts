@@ -26,7 +26,7 @@ import { PengaduanPage,PengaduandetailPage,PengaduancreatePage,PengaduaneditPage
 import { AntrianPage } from '../pages/antrian/antrian';
 import { ProfilePage } from '../pages/profile/profile';
 import { SettingPage } from '../pages/setting/setting';
-import { LoginPage,DaftarPage } from '../pages/login/login';
+import { LoginPage,DaftarPage,ForgotPage } from '../pages/login/login';
 import { ProfildesaPage } from '../pages/profildesa/profildesa';
 import { LocationSelectPage } from '../pages/location-select/location-select';
 import { BelanjaPage } from '../pages/belanja/belanja';
@@ -109,7 +109,7 @@ import { InformasiserviceProvider } from '../providers/informasiservice/informas
     BeritaDusunPage,BeritaDetailPage,
     ProfilePage,
     SettingPage,
-    LoginPage,DaftarPage,
+    LoginPage,DaftarPage,ForgotPage,
     ProfildesaPage,
     PengaduanPage,PengaduandetailPage,PengaduancreatePage,PengaduaneditPage,
     AntrianPage,
