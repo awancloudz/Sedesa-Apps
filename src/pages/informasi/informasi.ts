@@ -105,4 +105,24 @@ export class DetailInformasiPage {
     );
   }
 
+  tombolkomentar () {
+    this.navCtrl.push (KomentarPage)
+  }
+}
+
+@Component({
+  selector: 'komentarPage',
+  templateUrl: 'komentar.html',
+})
+export class KomentarPage {
+  item;
+  items:InformasiArray[]=[];
+  constructor(
+    public navCtrl: NavController, public navParams: NavParams,public loadincontroller:LoadingController,
+    public informasiservice:InformasiserviceProvider,public alertCtrl: AlertController,params: NavParams) {
+      this.item = params.data.item;
+  }
+
+  
+
 }
