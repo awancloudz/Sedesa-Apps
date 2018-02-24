@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 //Tambahakan aksiusul
 import { InformasiArray } from '../../pages/informasi/informasiarray';
+import { KomentarArray } from '../../pages/informasi/komentararray';
 //Tambahkan Response,Request,Header
 import { Http,Response,RequestOptions,Headers } from '@angular/http';
 //Tambahkan Obervable
@@ -29,7 +30,21 @@ export class InformasiserviceProvider {
   }
   detailinformasi(item)
   {
-      return this._http.get(this.url+"/detail/"+item)
+      return this._http.get(this.url+"/detail/"+item.id)
       .map((response:Response)=>response.json());
+  }
+  komentarinformasi(item)
+  {
+      return this._http.get(this.url+"/komentar/"+item.id)
+      .map((response:Response)=>response.json());
+  }
+  tambahkomentar(item:KomentarArray){
+    let body = JSON.stringify(item);
+    console.log(body);
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this._http.post(this.url+"/komentar",
+                  body, options)
+                 .map((response:Response)=>response.json());
   }
 }

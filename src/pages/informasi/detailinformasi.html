@@ -39,8 +39,8 @@
 
     <ion-row>
       <ion-col style="text-align: center">
-        <button ion-button outline style="text-transform: none ; border-radius: 20px" color="dark" (click)="tombolkomentar()">
-            <i class="fa fa-commenting-o" aria-hidden="true" style="margin-top: -5px ; padding-right: 10px ; font-size: 25px"></i>999 Komentar</button>
+        <button ion-button outline style="text-transform: none ; border-radius: 20px" color="dark" (click)="tombolkomentar(item)">
+            <i class="fa fa-commenting-o" aria-hidden="true" style="margin-top: -5px ; padding-right: 10px ; font-size: 25px"></i> {{ items.jumlahkomentar }} Komentar</button>
       </ion-col> 
     </ion-row>
   </ion-content>
