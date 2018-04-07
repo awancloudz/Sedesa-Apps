@@ -1,5 +1,5 @@
 import { Component,ViewChild } from '@angular/core';
-import { NavController,AlertController,Platform,LoadingController } from 'ionic-angular';
+import { NavController,AlertController,Platform,LoadingController,NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { OneSignal } from '@ionic-native/onesignal';
 import { Slides } from 'ionic-angular';
@@ -18,7 +18,7 @@ import { InformasiPage } from '../informasi/informasi';
 
 export class HomePage {
   @ViewChild(Slides) slides: Slides;
-
+  item;
   items:HomeArray[]=[];
   items2:UsulanArray[]=[];
   id:Number;
@@ -28,7 +28,8 @@ export class HomePage {
   
   constructor(public platform: Platform, public navCtrl: NavController,public storage: Storage,
     public homeservice:HomeserviceProvider,public alertCtrl: AlertController,public oneSignal: OneSignal,
-    public loadincontroller:LoadingController) {
+    public loadincontroller:LoadingController,params: NavParams) {
+    this.item = params.data.item;
     //TOMBOL EXIT
     this.platform.ready().then(() => {
       this.platform.registerBackButtonAction(() => {
@@ -121,8 +122,13 @@ ngAfterViewInit(){
      //}
   },1000)
 }
-ionViewWillEnter(){
-  this.home_menu = "kependudukan"
+ionViewWillEnter(item){
+  if(this.item != undefined){
+    this.home_menu = this.item;
+  }
+  else{
+    this.home_menu = "kependudukan";
+  }
 }
 
 tb_wisata(){

@@ -31,7 +31,7 @@ export class MyApp {
   //Tipe Variable untuk tombol menu
   pages_login: Array<{title: string, icon: string, color: any,component: any}>;
   pages_umum: Array<{title: string, icon: string, color: any,component: any,item: any}>;
-  pages_warga: Array<{title: string, icon: string, color: any,component: any}>;
+  pages_warga: Array<{title: string, icon: string, color: any,component: any,item: any}>;
   pages_dusun: Array<{title: string, icon: string, color: any,component: any}>;
   warga: Array<{nama: string}>;
   ids: any;
@@ -55,8 +55,12 @@ export class MyApp {
       { title: 'Login/Daftar',  icon: "sign-in", color: "iconprimary", component: LoginPage },
     ];
     this.pages_umum = [
-      { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage, item: '' },
-      { title: 'Wisata', icon: "tree", color: "iconprimary" ,  component: InformasiPage, item: 1},
+      { title: 'Home', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'informasi' },
+      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Toko Desa', icon: "first-order", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
+      /*{ title: 'Wisata', icon: "tree", color: "iconprimary" ,  component: InformasiPage, item: 1},
       { title: 'Kuliner', icon: "cutlery", color: "iconprimary" ,  component: InformasiPage, item: 2},
       { title: 'Event', icon: "calendar", color: "iconprimary" ,  component: InformasiPage, item: 3},
       { title: 'Berita', icon: "newspaper-o", color: "iconprimary" ,  component: InformasiPage, item: 4},
@@ -64,17 +68,20 @@ export class MyApp {
       { title: 'Info Harga', icon: "tags", color: "iconprimary" ,  component: InformasiPage, item: 6},
       { title: 'Usulan', icon: "edit", color: "iconprimary", component: '', item: '' },
       { title: 'Pengaduan', icon: "list-alt", color: "iconprimary", component: '', item: '' },
-      { title: 'Layanan', icon: "slideshare", color: "iconprimary", component: '', item: ''},
+      { title: 'Layanan', icon: "slideshare", color: "iconprimary", component: '', item: ''},*/
     ];
     this.pages_warga = [
-      { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage },
-      { title: 'Usulan Saya', icon: "edit", color: "iconprimary", component: UsulanPage },
+      { title: 'Home', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'informasi' },
+      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Toko Desa', icon: "first-order", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
+      /*{ title: 'Usulan Saya', icon: "edit", color: "iconprimary", component: UsulanPage },
       { title: 'Hasil Musyawarah',  icon: "calendar-check-o", color: "iconprimary", component: BeritaPage },
       { title: 'Pengaduan Saya',  icon: "list-alt", color: "iconprimary", component: PengaduanPage },
-      { title: 'Layanan',  icon: "slideshare", color: "iconprimary", component: AntrianPage },
-      { title: 'Belanja',  icon: "shopping-cart", color: "iconprimary", component: BelanjaPage },
-      { title: 'Profile',  icon: "user", color: "iconprimary", component: ProfilePage },
-      { title: 'Logout',  icon: "sign-out", color: "iconprimary", component: SettingPage },
+      { title: 'Layanan',  icon: "slideshare", color: "iconprimary", component: AntrianPage },*/
+      { title: 'Profile',  icon: "first-order", color: "iconprimary", component: ProfilePage, item: 'kependudukan' },
+      { title: 'Logout',  icon: "sign-out", color: "iconprimary", component: SettingPage, item: 'kependudukan' },
     ];
 
     this.pages_dusun = [
