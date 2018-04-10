@@ -19,9 +19,14 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class InformasiserviceProvider {
   private items:InformasiArray[]=[];
-  private url:string="http://forkomperbekelbali.com/desa/public/api/informasi";
+  //private url:string="http://forkomperbekelbali.com/desa/public/api/informasi";
+  private url:string="http://localhost:8000/api/informasi";
   constructor(public _http: Http) {
     
+  }
+  tampilkansemua(){
+    return this._http.get(this.url)
+    .map((response:Response)=>response.json());
   }
   tampilkaninformasi(item)
   {

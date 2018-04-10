@@ -9,7 +9,12 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title style="margin-left: -12px">Informasi</ion-title>
+    <ion-title style="margin-left: -12px" *ngIf="item == 1">Informasi Pariwisata</ion-title>
+    <ion-title style="margin-left: -12px" *ngIf="item == 2">Informasi Kuliner</ion-title>
+    <ion-title style="margin-left: -12px" *ngIf="item == 3">Informasi Berita</ion-title>
+    <ion-title style="margin-left: -12px" *ngIf="item == 4">Informasi Event</ion-title>
+    <ion-title style="margin-left: -12px" *ngIf="item == 5">Informasi Investasi</ion-title>
+    <ion-title style="margin-left: -12px" *ngIf="item == 6">Informasi Harga Pangan</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -23,17 +28,17 @@
     refreshingText="Refreshing..">
   </ion-refresher-content>
   </ion-refresher>
-  <ion-list style="margin-left: -10px" *ngFor="let item of items">
-    <ion-item (click)="detailinformasi(item)">
+  <ion-list style="margin-left: -10px">
+    <ion-item (click)="detailinformasi(item)" *ngFor="let item of items">
       <ion-row>
         <ion-col style="max-width: 100px ; max-height: 100px">
-          <img src="http://forkomperbekelbali.com/desa/public/fotoupload/{{ item.foto }}" alt="Poster" style="height: 100px ; max-width: 100px">
+          <img src="http://localhost:8000/fotoupload/{{ item.foto }}" alt="Poster" style="height: 100px ; max-width: 100px">
         </ion-col>
 
         <ion-col style="white-space: normal ; padding-left: 15px">
-          <p style="font-size: 14px"><b>{{ item.judul }}</b></p>
-          <p style="font-size: 12px">{{ item.warga.nama }}</p>
-          <p style="font-size: 12px">{{ item.tanggal }}</p>
+          <p style="font-size: 16px"><b>{{ item.judul }}</b></p>
+          <p style="font-size: 12px"><ion-icon name="ios-contact"></ion-icon> {{ item.user.name}}</p>
+          <p style="font-size: 12px"><ion-icon name="md-calendar"></ion-icon> {{ item.created_at }}</p>
         </ion-col>
       </ion-row>
     </ion-item>
@@ -50,3 +55,12 @@
         </ion-item>
   </ion-list>-->
 </ion-content>
+<ion-fab bottom right>
+  <button ion-fab color="primary" style="margin-bottom: 10px">
+    <i class="fa fa-list-ul" aria-hidden="true" style="zoom: 2.1"></i>   
+  </button>
+  
+  <button ion-fab color="primary">
+    <i class="fa fa-pencil" aria-hidden="true" style="zoom: 2.1"></i>
+  </button>
+</ion-fab>

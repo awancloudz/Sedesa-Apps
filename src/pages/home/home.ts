@@ -8,12 +8,12 @@ import { HomeserviceProvider } from '../../providers/homeservice/homeservice';
 //Tambahkan Variabel Global
 import { HomeArray } from '../../pages/home/homearray';
 import { UsulanArray } from '../../pages/usulan/usulanarray';
-import { InformasiPage } from '../informasi/informasi';
+import { InformasiPage,InformasiAllPage,DetailInformasiPage } from '../informasi/informasi';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  entryComponents:[ InformasiPage ],
+  entryComponents:[ InformasiPage,DetailInformasiPage ],
 })
 
 export class HomePage {
@@ -137,7 +137,6 @@ tb_wisata(){
 tb_kuliner(){
   this.navCtrl.push(InformasiPage, { item: 2 });
 }
-
 tb_event(){
   this.navCtrl.push(InformasiPage, { item: 3});
 }
@@ -150,19 +149,21 @@ tb_investasi(){
 tb_harga(){
   this.navCtrl.push(InformasiPage, { item: 6});
 }
+detailinformasi(item2){
+  this.navCtrl.push(DetailInformasiPage, { item: item2});
+}
 }
 
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home-kategori.html',
-  entryComponents:[ InformasiPage ],
+  entryComponents:[ InformasiPage,InformasiAllPage ],
 })
 
 export class HomePageKategori {
   @ViewChild(Slides) slides: Slides;
   item;
-  home_menu:string
   
   constructor(public platform: Platform, public navCtrl: NavController,public storage: Storage,
     public homeservice:HomeserviceProvider,public alertCtrl: AlertController,public oneSignal: OneSignal,
@@ -173,5 +174,26 @@ export class HomePageKategori {
       this.nav.pop();
       backAction();
     },2)
+  }
+  tb_wisata(){
+    this.navCtrl.push(InformasiPage, { item: 1 });
+  }
+  tb_kuliner(){
+    this.navCtrl.push(InformasiPage, { item: 2 });
+  }
+  tb_event(){
+    this.navCtrl.push(InformasiPage, { item: 3});
+  }
+  tb_berita(){
+    this.navCtrl.push(InformasiPage, { item: 4});
+  }
+  tb_investasi(){
+    this.navCtrl.push(InformasiPage, { item: 5});
+  }
+  tb_harga(){
+    this.navCtrl.push(InformasiPage, { item: 6});
+  }
+  semuaposting(){
+    this.navCtrl.push(InformasiAllPage);
   }
 }

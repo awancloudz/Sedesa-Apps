@@ -6,80 +6,148 @@
 -->
 <ion-header>
 
-    <ion-navbar color="secondary">
+    <ion-navbar color="primary">
   
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
   
-      <ion-title>Peran Warga</ion-title>
+      <ion-title *ngIf="item == 'kependudukan'">Kependudukan</ion-title>
+      <ion-title *ngIf="item == 'peranwarga'">Peran Warga</ion-title>
+      <ion-title *ngIf="item == 'informasi'">Informasi</ion-title>
   
     </ion-navbar>
   
   </ion-header>
   
   <ion-content padding>
-  
-  <div>
-      <ion-list style="margin-top: -10px">
-          <ion-row style="margin-left: -15px">
-            <ion-col style="margin-right: -20px">
-              <ion-card class="menu_card" (click)="usulan()">
-                <ion-buttons>
-                  <img src="usulan.png" class="menu_icon">
-                    <p class="menu_title">Usulan</p>
-                </ion-buttons>
-              </ion-card>
-            </ion-col>
-        
-            <ion-col style="margin-right: -20px">
-              <ion-card class="menu_card" (click)="pengaduan()">
-                <ion-buttons>
-                  <img src="pengaduan.png" class="menu_icon">
-                  <p class="menu_title">Pengaduan</p>
-                </ion-buttons>
-              </ion-card>
-            </ion-col>
+
+  <!-- JIKA INFORMASI -->
+  <div *ngIf="item == 'informasi'">
+    <ion-list style="margin-top: -10px">
+        <ion-row style="margin-left: -15px">
+          <ion-col style="margin-right: -20px" (click)="tb_wisata()">
+            <ion-buttons>
+            <ion-card class="menu_card">
+              <img src="pariwisata.png" class="menu_icon">
+              <p class="menu_title">Pariwisata</p>
+            </ion-card>
+          </ion-buttons>
+          </ion-col>
       
-            <ion-col style="margin-right: -17px">
-              <ion-buttons>
-                <ion-card class="menu_card">
-                  <img src="layanan.png" style="width: 55px ; height: 55px ; margin: 0 auto ; margin-top: 15px">
-                  <p style="text-transform: none;margin-top: 10px;text-align: center">Layanan</p>
-                </ion-card>
-              </ion-buttons>
-            </ion-col>
-          </ion-row>
-      
-          <ion-row style="margin-left: -15px ; margin-top: -15px">
-            <ion-col style="margin-right: -20px">
-              <ion-card class="menu_card" (click)="posting()">
-                <ion-buttons>
-                  <img src="posting.png" style="width: 55px ; height: 55px ; margin: 0 auto ; margin-top: 15px">
-                    <p style="text-transform: none;margin-top: 10px;text-align: center">Posting</p>
-                </ion-buttons>
-              </ion-card>
-            </ion-col>
-        
-            <ion-col style="margin-right: -20px">
+          <ion-col style="margin-right: -20px" (click)="tb_kuliner()">
+            <ion-buttons>
               <ion-card class="menu_card">
-                <ion-buttons>
-                  <img src="toko_desa.png" class="menu_icon">
-                  <p class="menu_title">Toko Desa</p>
-                </ion-buttons>
+                <img src="kuliner.png" class="menu_icon">
+                <p class="menu_title">Kuliner</p>
               </ion-card>
-            </ion-col>
+            </ion-buttons>
+          </ion-col>
       
-            <ion-col style="margin-right: -17px">
+          <ion-col style="margin-right: -17px" (click)="tb_berita()">
+            <ion-buttons>
+              <ion-card class="menu_card">
+                <img src="berita.png" class="menu_icon">
+                <p class="menu_title">Berita</p>
+              </ion-card>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+      
+        <ion-row style="margin-left: -15px ; margin-top: -15px" (click)="tb_event()">
+          <ion-col style="margin-right: -20px">
+            <ion-buttons>
+              <ion-card class="menu_card">
+                <img src="event.png" class="menu_icon">
+                <p class="menu_title">Event</p>
+              </ion-card>
+            </ion-buttons>
+          </ion-col>
+      
+          <ion-col style="margin-right: -20px" (click)="tb_investasi()">
+            <ion-buttons>
+              <ion-card class="menu_card">
+                <img src="investasi.png" class="menu_icon">
+                <p class="menu_title">Investasi</p>
+              </ion-card>
+            </ion-buttons>
+          </ion-col>
+      
+          <ion-col style="margin-right: -17px" (click)="tb_harga()">
+            <ion-buttons>
+              <ion-card class="menu_card">
+                  <img src="info_harga.png" class="menu_icon">
+                  <p class="menu_title">Harga Pangan</p>
+              </ion-card>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+        <button ion-button block (click)="semuaposting()">Lihat Semua</button>
+      </ion-list>
+  </div>
+
+  <!-- JIKA PERAN WARGA -->
+  <div *ngIf="item == 'peranwarga'">
+    <ion-list style="margin-top: -10px">
+      <ion-row style="margin-left: -15px">
+        <ion-col style="margin-right: -20px">
+            <ion-card class="menu_card">
               <ion-buttons>
-                <ion-card class="menu_card">
-                  <img src="pemetaan.png" class="menu_icon">
-                  <p class="menu_title">Pemetaan</p>
-                </ion-card>
+                <img src="posting.png" style="width: 55px ; height: 55px ; margin: 0 auto ; margin-top: 15px">
+                  <p style="text-transform: none;margin-top: 10px;text-align: center">Posting</p>
               </ion-buttons>
-            </ion-col>
-          </ion-row>
-        </ion-list>
+            </ion-card>
+        </ion-col>
+    
+        <ion-col style="margin-right: -20px">
+            <ion-card class="menu_card">
+              <ion-buttons>
+                <img src="usulan.png" class="menu_icon">
+                  <p class="menu_title">Usulan</p>
+              </ion-buttons>
+            </ion-card>
+        </ion-col>
+  
+        <ion-col style="margin-right: -17px">
+            <ion-card class="menu_card">
+              <ion-buttons>
+                <img src="pengaduan.png" class="menu_icon">
+                <p class="menu_title">Pengaduan</p>
+              </ion-buttons>
+            </ion-card>
+        </ion-col>
+      </ion-row>
+  
+    </ion-list>
   </div>
   
+  <!-- JIKA KEPENDUDUKAN -->
+  <div *ngIf="item == 'kependudukan'">
+    <ion-list style="margin-top: -10px">
+      <ion-row style="margin-left: -15px ; margin-top: -15px">
+        <ion-col style="margin-right: -20px">
+          <ion-card class="menu_card">
+            <ion-buttons>
+            <img src="layanan.png" style="width: 55px ; height: 55px ; margin: 0 auto ; margin-top: 15px">
+            <p style="text-transform: none;margin-top: 10px;text-align: center">Layanan</p>
+            </ion-buttons>
+          </ion-card>
+        </ion-col>
+    
+        <ion-col style="margin-right: -20px">
+            <ion-buttons>
+              <ion-card class="menu_card">
+                <img src="pemetaan.png" class="menu_icon">
+                <p class="menu_title">Pemetaan</p>
+              </ion-card>
+            </ion-buttons>
+        </ion-col>
+  
+        <ion-col style="margin-right: -17px">
+
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </div>
   </ion-content>
+  

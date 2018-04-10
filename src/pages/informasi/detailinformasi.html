@@ -25,16 +25,10 @@
     </ion-refresher>
     <div padding>
       <p style="font-size: 26px ; margin-top: -5px"><b>{{ item.judul }}</b></p>
-      <p style="font-size: 12px ; margin-top: -23px">{{ item.tanggal }}</p>
-      <p style="font-size: 12px ; margin-top: -8px">{{ item.warga.nama }}</p>
-    </div>
-      
-    <div>
-        <img src="http://forkomperbekelbali.com/desa/public/fotoupload/{{ item.foto }}" style="height: 50% ; width: 100%">
-    </div>
-
-    <div padding>
-        <p>{{ item.isipost }}</p>
+      <p style="font-size: 12px ; margin-top: -23px"><ion-icon name="md-calendar"></ion-icon> {{ item.created_at }} &nbsp;<ion-icon name="ios-contact"></ion-icon> {{ item.user.name }}</p>
+      <!--<p style="font-size: 12px ; margin-top: -8px"></p>-->
+      <img src="http://localhost:8000/fotoupload/{{ item.foto }}" style="height: 50% ; width: 100%">
+      <div [innerHtml]="item.isipost" align="justify"></div>
     </div>
 
     <ion-row>

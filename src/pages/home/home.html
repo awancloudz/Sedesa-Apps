@@ -48,84 +48,83 @@
   </div>-->
 
 
-  
+<br>
 <ion-slides class="desa-home-slide">
-
   <ion-slide *ngFor="let item of items.daftarinformasi; let id = index">
     <img src="http://forkomperbekelbali.com/desa/public/fotoupload/{{ item.foto }}" class="slide-image" style="height: 70vh; width: auto; margin: auto; display: block;"/>
    </ion-slide>
-
 </ion-slides>
 
 <ion-list>
   <ion-card>
     <div>
-      <ion-card style="height: 30px">
-        <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 3px">Informasi Terbaru</ion-title>
-      </ion-card>
+      <!--<ion-card style="height: 30px">-->
+        <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 10px">Informasi Terbaru</ion-title>
+      <!--</ion-card>-->
     </div>
 
-    <div>
-      <ion-card>
-      <ion-buttons>
+  <!-- FOR -->
+  <div *ngFor="let item2 of items.daftarposting;let id2 = index">
+    <div *ngIf="id2 == 0">
         <ion-row>
-          <ion-col>
-                <img src="pic.jpg">
-                <p style="white-space: normal ; margin-top: 5px"><b>Judul informasi Judul informasi Judul informasi Judul informasi </b></p>
-                <p style="font-size: 12px">Selasa, 00 Desember 0000. Jam 00:00 WIB</p>
+          <ion-col (click)="detailinformasi(item2)">
+          <ion-buttons>
+            <ion-card>
+            <img src="http://localhost:8000/fotoupload/{{ item2.foto }}">
+            <p style="white-space: normal ; margin-top: 5px"><b>{{ item2.judul }}</b></p>
+            <p style="font-size: 12px">{{ item2.created_at }} <!--Selasa, 00 Desember 0000. Jam 00:00 WIB--></p>
+            </ion-card>
+          </ion-buttons>
           </ion-col>
         </ion-row>
-      </ion-buttons>
-    </ion-card>
     </div>
-
-    <div>
+    <div *ngIf="(id2 != 0) && (id2 <= 5)" (click)="detailinformasi(item2)">
       <ion-buttons>
-        <ion-row *ngFor="let item2 of items.daftarposting">
+        <ion-row>
           <ion-col style="max-width: 80px">
             <img src="http://localhost:8000/fotoupload/{{ item2.foto }}" alt="Poster" style="width: 70px ; height: 70px">
           </ion-col>
-          
           <ion-col style="white-space: normal">
-            <p style="font-size: 12px"><b>{{ item2.judul }} </b></p>
+            <p style="font-size: 12px"><b>{{ item2.judul }}</b></p>
             <p style="font-size: 10px">{{ item2.created_at }}</p>
           </ion-col>
         </ion-row>
       </ion-buttons>
     </div>
+  </div>
+  <!--END FOR -->
   </ion-card>
 </ion-list>
   
   <ion-list>
     <ion-card>
-
       <div>
-        <ion-card style="height: 30px">
-          <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 3px">Usulan Terbaru</ion-title>
-        </ion-card>
+        <!--<ion-card style="height: 30px">-->
+          <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 10px">Usulan Terbaru</ion-title>
+        <!--</ion-card>-->
       </div>
 
-      <div>
+    <!-- FOR -->
+    <div *ngFor="let item3 of items.daftarusulan;let id3 = index">
+      <div *ngIf="id3 == 0">
         <ion-card>
         <ion-buttons>
           <ion-row>
             <ion-col>
-                  <img src="pic.jpg">
-                  <p style="white-space: normal ; margin-top: 5px"><b>Judul usulan Judul usulan Judul usulan Judul usulan </b></p>
-                  <p style="font-size: 12px">Selasa, 00 Desember 0000. Jam 00:00 WIB</p>
+              <img src="pic.jpg">
+              <p style="white-space: normal ; margin-top: 5px"><b>{{ item3.judul }}</b></p>
+              <p style="font-size: 12px">{{ item3.created_at }} <!--Selasa, 00 Desember 0000. Jam 00:00 WIB--></p>
             </ion-col>
           </ion-row>
         </ion-buttons>
       </ion-card>
       </div>
-  
-      <div>
+      <div *ngIf="(id3 != 0) && (id3 <= 5)">
         <ion-buttons>
-          <ion-row *ngFor="let item3 of items.daftarusulan">
+          <ion-row>
             <ion-col style="max-width: 80px">
               <img src="pic.jpg" alt="Poster" style="width: 70px ; height: 70px">
             </ion-col>
-            
             <ion-col style="white-space: normal">
               <p style="font-size: 12px"><b>{{ item3.judul }}</b></p>
               <p style="font-size: 10px">{{ item3.created_at }}</p>
@@ -133,40 +132,40 @@
           </ion-row>
         </ion-buttons>
       </div>
+    </div>
+    <!--END FOR -->
     </ion-card>
   </ion-list>
 
   <ion-list>
       <ion-card>
-
         <div>
-          <ion-card style="height: 30px">
-            <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 3px">Pengaduan Terbaru</ion-title>
-          </ion-card>
+          <!--<ion-card style="height: 30px">-->
+            <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 10px">Pengaduan Terbaru</ion-title>
+          <!--</ion-card>-->
         </div>
 
-        <div>
+      <!-- FOR -->
+      <div *ngFor="let item4 of items.daftarpengaduan;let id4 = index">
+        <div *ngIf="id4 == 0">
           <ion-card>
           <ion-buttons>
             <ion-row>
               <ion-col>
-    
-                    <img src="pic.jpg">
-                    <p style="white-space: normal ; margin-top: 5px"><b>Judul pengaduan Judul pengaduan Judul pengaduan Judul pengaduan </b></p>
-                    <p style="font-size: 12px">Selasa, 00 Desember 0000. Jam 00:00 WIB</p>
+                <img src="pic.jpg">
+                <p style="white-space: normal ; margin-top: 5px"><b>{{ item4.judul }}</b></p>
+                <p style="font-size: 12px">{{ item4.created_at }}<!--Selasa, 00 Desember 0000. Jam 00:00 WIB--></p>
               </ion-col>
             </ion-row>
           </ion-buttons>
         </ion-card>
         </div>
-    
-        <div>
+        <div *ngIf="(id4 != 0) && (id4 <= 5)">
           <ion-buttons>
-            <ion-row *ngFor="let item4 of items.daftarpengaduan">
+            <ion-row>
               <ion-col style="max-width: 80px">
                 <img src="pic.jpg" alt="Poster" style="width: 70px ; height: 70px">
               </ion-col>
-              
               <ion-col style="white-space: normal">
                 <p style="font-size: 12px"><b>{{ item4.judul }}</b></p>
                 <p style="font-size: 10px">{{ item4.created_at }}</p>
@@ -174,6 +173,8 @@
             </ion-row>
           </ion-buttons>
         </div>
+      </div>
+      <!-- END FOR -->
       </ion-card>
     </ion-list>
 
@@ -196,7 +197,7 @@
           <ion-segment-button value="kependudukan" style="text-transform: none ; font-size: 15px">
             Peran Warga
           </ion-segment-button>
-      
+
           <ion-segment-button value="informasi" style="text-transform: none ; font-size: 15px">
             Informasi
           </ion-segment-button>
@@ -314,7 +315,7 @@
               <ion-buttons>
                 <ion-card class="menu_card">
                     <img src="info_harga.png" class="menu_icon">
-                    <p class="menu_title">Info Harga</p>
+                    <p class="menu_title">Harga Pangan</p>
                 </ion-card>
               </ion-buttons>
             </ion-col>

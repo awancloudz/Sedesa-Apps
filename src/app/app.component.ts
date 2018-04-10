@@ -57,7 +57,7 @@ export class MyApp {
     this.pages_umum = [
       { title: 'Home', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
       { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'informasi' },
-      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
+      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'peranwarga' },
       { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
       { title: 'Toko Desa', icon: "first-order", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
       /*{ title: 'Wisata', icon: "tree", color: "iconprimary" ,  component: InformasiPage, item: 1},
@@ -73,7 +73,7 @@ export class MyApp {
     this.pages_warga = [
       { title: 'Home', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
       { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'informasi' },
-      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
+      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'peranwarga' },
       { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
       { title: 'Toko Desa', icon: "first-order", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
       /*{ title: 'Usulan Saya', icon: "edit", color: "iconprimary", component: UsulanPage },
