@@ -151,3 +151,27 @@ tb_harga(){
   this.navCtrl.push(InformasiPage, { item: 6});
 }
 }
+
+
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home-kategori.html',
+  entryComponents:[ InformasiPage ],
+})
+
+export class HomePageKategori {
+  @ViewChild(Slides) slides: Slides;
+  item;
+  home_menu:string
+  
+  constructor(public platform: Platform, public navCtrl: NavController,public storage: Storage,
+    public homeservice:HomeserviceProvider,public alertCtrl: AlertController,public oneSignal: OneSignal,
+    public loadincontroller:LoadingController,public nav: NavController,params: NavParams) {
+    this.item = params.data.item;
+    //Hapus Back
+    let backAction =  platform.registerBackButtonAction(() => {
+      this.nav.pop();
+      backAction();
+    },2)
+  }
+}

@@ -23,7 +23,8 @@ export class HomeserviceProvider {
   //Memanggil URL Api
   private url:string="http://forkomperbekelbali.com/desa/public/api/perangkat";
   private url2:string="http://forkomperbekelbali.com/desa/public/api/usulanbaru";
-  private awal:string="http://forkomperbekelbali.com/desa/public/api/halamanawal";
+  //private awal:string="http://forkomperbekelbali.com/desa/public/api/halamanawal";
+  private awal:string="http://localhost:8000/api/halamanawal";
   constructor(public _http: Http) {
   }
     //Tampilkan home

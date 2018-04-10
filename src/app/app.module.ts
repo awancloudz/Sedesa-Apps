@@ -17,7 +17,7 @@ import { Network } from '@ionic-native/network';
 import { OneSignal } from '@ionic-native/onesignal';
 // Mengambil SEMUA halaman yg sudah dibuat
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HomePage,HomePageKategori } from '../pages/home/home';
 import { InformasiPage,DetailInformasiPage, KomentarPage } from '../pages/informasi/informasi';
 import { UsulanPage,UsulandetailPage,UsulancreatePage,UsulaneditPage } from '../pages/usulan/usulan';
 import { UsulanDusunPage,UsulanDusundetailPage } from '../pages/usulandusun/usulandusun';
@@ -41,6 +41,7 @@ import { ProfileserviceProvider } from '../providers/profileservice/profileservi
 import { LoginserviceProvider } from '../providers/loginservice/loginservice';
 import { ConnectivityServiceProvider } from '../providers/connectivity-service/connectivity-service'; 
 import { GoogleMapsProvider } from '../providers/google-maps/google-maps'; 
+import { HomePageModule } from '../pages/home/home.module';
 import { BeritaPageModule } from '../pages/berita/berita.module';
 import { PengaduanPageModule } from '../pages/pengaduan/pengaduan.module';
 import { AntrianPageModule } from '../pages/antrian/antrian.module';
@@ -63,7 +64,7 @@ import { InformasiserviceProvider } from '../providers/informasiservice/informas
   //Deklarasi variabel page
   declarations: [
     MyApp,
-    HomePage,
+    //HomePage,
     //UsulanPage,
     //UsulandetailPage,
     //UsulancreatePage,
@@ -80,6 +81,7 @@ import { InformasiserviceProvider } from '../providers/informasiservice/informas
     HttpModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
+    HomePageModule,
     BeritaPageModule,
     LoginPageModule,
     UsulanPageModule,
@@ -97,7 +99,7 @@ import { InformasiserviceProvider } from '../providers/informasiservice/informas
   //Komponen Aplikasi
   entryComponents: [
     MyApp,
-    HomePage,
+    HomePage,HomePageKategori,
     InformasiPage,DetailInformasiPage,KomentarPage,
     UsulanPage,
     UsulandetailPage,

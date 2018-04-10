@@ -56,138 +56,269 @@
    </ion-slide>
 
 </ion-slides>
-  
-<div padding>
-  <ion-segment [(ngModel)]="home_menu" style="margin-top: -15px">
-    <ion-segment-button value="kependudukan" style="text-transform: none ; font-size: 15px">
-      Kependudukan
-    </ion-segment-button>
 
-    <ion-segment-button value="informasi" style="text-transform: none ; font-size: 15px">
-      Informasi
-    </ion-segment-button>
-  </ion-segment>
-</div>
-  
-<div padding [ngSwitch]="home_menu">
-  <ion-list *ngSwitchCase="'kependudukan'">
-    <ion-row style="margin-left: -15px ; margin-top: -30px">
-      <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
-            <img src="usulan.png" class="menu_icon">
-              <p class="menu_title">Usulan</p>
-          </ion-buttons>
-        </ion-card>
-      </ion-col>
-  
-      <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
-            <img src="pengaduan.png" class="menu_icon">
-            <p class="menu_title">Pengaduan</p>
-          </ion-buttons>
-        </ion-card>
-      </ion-col>
+<ion-list>
+  <ion-card>
+    <div>
+      <ion-card style="height: 30px">
+        <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 3px">Informasi Terbaru</ion-title>
+      </ion-card>
+    </div>
 
-      <ion-col style="margin-right: -17px">
-        <ion-buttons>
-          <ion-card class="menu_card">
-            <img src="layanan.png" style="width: 55px ; height: 55px ; margin: 0 auto ; margin-top: 15px">
-            <p style="text-transform: none;margin-top: 10px;text-align: center">Layanan</p>
-          </ion-card>
-        </ion-buttons>
-      </ion-col>
-    </ion-row>
-
-    <ion-row style="margin-left: -15px ; margin-top: -15px">
-      <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
-            <img src="posting.png" style="width: 55px ; height: 55px ; margin: 0 auto ; margin-top: 15px">
-              <p style="text-transform: none;margin-top: 10px;text-align: center">Posting</p>
-          </ion-buttons>
-        </ion-card>
-      </ion-col>
-  
-      <ion-col style="margin-right: -20px">
-        <ion-card class="menu_card">
-          <ion-buttons>
-            <img src="toko_desa.png" class="menu_icon">
-            <p class="menu_title">Toko Desa</p>
-          </ion-buttons>
-        </ion-card>
-      </ion-col>
-
-      <ion-col style="margin-right: -17px">
-        <ion-buttons>
-          <ion-card class="menu_card">
-            <img src="pemetaan.png" class="menu_icon">
-            <p class="menu_title">Pemetaan</p>
-          </ion-card>
-        </ion-buttons>
-      </ion-col>
-    </ion-row>
-  </ion-list>
-        
-  <ion-list *ngSwitchCase="'informasi'">
-    <ion-row style="margin-left: -15px ; margin-top: -30px">
-      <ion-col style="margin-right: -20px" (click)="tb_wisata()">
-        <ion-buttons>
-        <ion-card class="menu_card">
-          <img src="pariwisata.png" class="menu_icon">
-          <p class="menu_title">Pariwisata</p>
-        </ion-card>
+    <div>
+      <ion-card>
+      <ion-buttons>
+        <ion-row>
+          <ion-col>
+                <img src="pic.jpg">
+                <p style="white-space: normal ; margin-top: 5px"><b>Judul informasi Judul informasi Judul informasi Judul informasi </b></p>
+                <p style="font-size: 12px">Selasa, 00 Desember 0000. Jam 00:00 WIB</p>
+          </ion-col>
+        </ion-row>
       </ion-buttons>
-      </ion-col>
+    </ion-card>
+    </div>
+
+    <div>
+      <ion-buttons>
+        <ion-row *ngFor="let item2 of items.daftarposting">
+          <ion-col style="max-width: 80px">
+            <img src="http://localhost:8000/fotoupload/{{ item2.foto }}" alt="Poster" style="width: 70px ; height: 70px">
+          </ion-col>
+          
+          <ion-col style="white-space: normal">
+            <p style="font-size: 12px"><b>{{ item2.judul }} </b></p>
+            <p style="font-size: 10px">{{ item2.created_at }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-buttons>
+    </div>
+  </ion-card>
+</ion-list>
   
-      <ion-col style="margin-right: -20px" (click)="tb_kuliner()">
+  <ion-list>
+    <ion-card>
+
+      <div>
+        <ion-card style="height: 30px">
+          <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 3px">Usulan Terbaru</ion-title>
+        </ion-card>
+      </div>
+
+      <div>
+        <ion-card>
         <ion-buttons>
-          <ion-card class="menu_card">
-            <img src="kuliner.png" class="menu_icon">
-            <p class="menu_title">Kuliner</p>
-          </ion-card>
+          <ion-row>
+            <ion-col>
+                  <img src="pic.jpg">
+                  <p style="white-space: normal ; margin-top: 5px"><b>Judul usulan Judul usulan Judul usulan Judul usulan </b></p>
+                  <p style="font-size: 12px">Selasa, 00 Desember 0000. Jam 00:00 WIB</p>
+            </ion-col>
+          </ion-row>
         </ion-buttons>
-      </ion-col>
+      </ion-card>
+      </div>
   
-      <ion-col style="margin-right: -17px" (click)="tb_berita()">
+      <div>
         <ion-buttons>
-          <ion-card class="menu_card">
-            <img src="berita.png" class="menu_icon">
-            <p class="menu_title">Berita</p>
-          </ion-card>
+          <ion-row *ngFor="let item3 of items.daftarusulan">
+            <ion-col style="max-width: 80px">
+              <img src="pic.jpg" alt="Poster" style="width: 70px ; height: 70px">
+            </ion-col>
+            
+            <ion-col style="white-space: normal">
+              <p style="font-size: 12px"><b>{{ item3.judul }}</b></p>
+              <p style="font-size: 10px">{{ item3.created_at }}</p>
+            </ion-col>
+          </ion-row>
         </ion-buttons>
-      </ion-col>
-    </ion-row>
-  
-    <ion-row style="margin-left: -15px ; margin-top: -15px" (click)="tb_event()">
-      <ion-col style="margin-right: -20px">
-        <ion-buttons>
-          <ion-card class="menu_card">
-            <img src="event.png" class="menu_icon">
-            <p class="menu_title">Event</p>
-          </ion-card>
-        </ion-buttons>
-      </ion-col>
-  
-      <ion-col style="margin-right: -20px" (click)="tb_investasi()">
-        <ion-buttons>
-          <ion-card class="menu_card">
-            <img src="investasi.png" class="menu_icon">
-            <p class="menu_title">Investasi</p>
-          </ion-card>
-        </ion-buttons>
-      </ion-col>
-  
-      <ion-col style="margin-right: -17px" (click)="tb_harga()">
-        <ion-buttons>
-          <ion-card class="menu_card">
-              <img src="info_harga.png" class="menu_icon">
-              <p class="menu_title">Info Harga</p>
-          </ion-card>
-        </ion-buttons>
-      </ion-col>
-    </ion-row>
+      </div>
+    </ion-card>
   </ion-list>
-</div>
+
+  <ion-list>
+      <ion-card>
+
+        <div>
+          <ion-card style="height: 30px">
+            <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 3px">Pengaduan Terbaru</ion-title>
+          </ion-card>
+        </div>
+
+        <div>
+          <ion-card>
+          <ion-buttons>
+            <ion-row>
+              <ion-col>
+    
+                    <img src="pic.jpg">
+                    <p style="white-space: normal ; margin-top: 5px"><b>Judul pengaduan Judul pengaduan Judul pengaduan Judul pengaduan </b></p>
+                    <p style="font-size: 12px">Selasa, 00 Desember 0000. Jam 00:00 WIB</p>
+              </ion-col>
+            </ion-row>
+          </ion-buttons>
+        </ion-card>
+        </div>
+    
+        <div>
+          <ion-buttons>
+            <ion-row *ngFor="let item4 of items.daftarpengaduan">
+              <ion-col style="max-width: 80px">
+                <img src="pic.jpg" alt="Poster" style="width: 70px ; height: 70px">
+              </ion-col>
+              
+              <ion-col style="white-space: normal">
+                <p style="font-size: 12px"><b>{{ item4.judul }}</b></p>
+                <p style="font-size: 10px">{{ item4.created_at }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-buttons>
+        </div>
+      </ion-card>
+    </ion-list>
+
+    <div>
+        <ion-card>
+          <ion-row>
+            <ion-col style="max-width: 110px">
+              <img src="e-commerce.png" style="width: 100px ; height: 100px">
+            </ion-col>
+      
+            <ion-col>
+              <p style="font-size: 12px ; text-align: center"><b>Download Aplikasi Toko Desa memudahkan Warga desa bisa melakukan proses jual beli barang atau komoditas alam (perkebunan, pertanian, pertambangan, dll) antar sesama warga desa atau ke pembeli di seluruh Indonesia.</b></p>
+              <img src="toko_desa_playstore.png" style="height: 35px ; width: 100px ; margin: 0 auto">
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </div>
+      <div padding>
+        <ion-segment [(ngModel)]="home_menu" style="margin-top: -15px">
+          <ion-segment-button value="kependudukan" style="text-transform: none ; font-size: 15px">
+            Peran Warga
+          </ion-segment-button>
+      
+          <ion-segment-button value="informasi" style="text-transform: none ; font-size: 15px">
+            Informasi
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+        
+      <div padding [ngSwitch]="home_menu">
+        <ion-list *ngSwitchCase="'kependudukan'">
+          <ion-row style="margin-left: -15px ; margin-top: -30px">
+      
+              <ion-col style="margin-right: -20px">
+                  <ion-buttons>
+                  <ion-card class="menu_card">
+                    <img src="posting.png" class="menu_icon">
+                    <p class="menu_title">Posting</p>
+                  </ion-card>
+                </ion-buttons>
+                </ion-col>
+            
+                <ion-col style="margin-right: -20px">
+                  <ion-buttons>
+                    <ion-card class="menu_card">
+                      <img src="usulan.png" class="menu_icon">
+                      <p class="menu_title">Usulan</p>
+                    </ion-card>
+                  </ion-buttons>
+                </ion-col>
+            
+                <ion-col style="margin-right: -17px">
+                  <ion-buttons>
+                    <ion-card class="menu_card">
+                      <img src="pengaduan.png" class="menu_icon">
+                      <p class="menu_title">Pengaduan</p>
+                    </ion-card>
+                  </ion-buttons>
+                </ion-col>
+              </ion-row>
+            
+              <ion-row style="margin-left: -15px ; margin-top: -15px">
+                <ion-col style="margin-right: -20px">
+                  <ion-buttons>
+                    <ion-card class="menu_card">
+                      <img src="layanan.png" class="menu_icon">
+                      <p class="menu_title">Layanan</p>
+                    </ion-card>
+                  </ion-buttons>
+                </ion-col>
+            
+                <ion-col style="margin-right: -20px">
+                  <ion-buttons>
+                    <ion-card class="menu_card">
+                      <img src="pemetaan.png" class="menu_icon">
+                      <p class="menu_title">Pemetaan</p>
+                    </ion-card>
+                  </ion-buttons>
+                </ion-col>
+            
+                <ion-col style="margin-right: -17px">
+                  
+                </ion-col>
+      
+          </ion-row>
+        </ion-list>
+              
+        <ion-list *ngSwitchCase="'informasi'">
+          <ion-row style="margin-left: -15px ; margin-top: -30px">
+            <ion-col style="margin-right: -20px" (click)="tb_wisata()">
+              <ion-buttons>
+              <ion-card class="menu_card">
+                <img src="pariwisata.png" class="menu_icon">
+                <p class="menu_title">Pariwisata</p>
+              </ion-card>
+            </ion-buttons>
+            </ion-col>
+        
+            <ion-col style="margin-right: -20px" (click)="tb_kuliner()">
+              <ion-buttons>
+                <ion-card class="menu_card">
+                  <img src="kuliner.png" class="menu_icon">
+                  <p class="menu_title">Kuliner</p>
+                </ion-card>
+              </ion-buttons>
+            </ion-col>
+        
+            <ion-col style="margin-right: -17px" (click)="tb_berita()">
+              <ion-buttons>
+                <ion-card class="menu_card">
+                  <img src="berita.png" class="menu_icon">
+                  <p class="menu_title">Berita</p>
+                </ion-card>
+              </ion-buttons>
+            </ion-col>
+          </ion-row>
+        
+          <ion-row style="margin-left: -15px ; margin-top: -15px" (click)="tb_event()">
+            <ion-col style="margin-right: -20px">
+              <ion-buttons>
+                <ion-card class="menu_card">
+                  <img src="event.png" class="menu_icon">
+                  <p class="menu_title">Event</p>
+                </ion-card>
+              </ion-buttons>
+            </ion-col>
+        
+            <ion-col style="margin-right: -20px" (click)="tb_investasi()">
+              <ion-buttons>
+                <ion-card class="menu_card">
+                  <img src="investasi.png" class="menu_icon">
+                  <p class="menu_title">Investasi</p>
+                </ion-card>
+              </ion-buttons>
+            </ion-col>
+        
+            <ion-col style="margin-right: -17px" (click)="tb_harga()">
+              <ion-buttons>
+                <ion-card class="menu_card">
+                    <img src="info_harga.png" class="menu_icon">
+                    <p class="menu_title">Info Harga</p>
+                </ion-card>
+              </ion-buttons>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+      </div>
 </ion-content>

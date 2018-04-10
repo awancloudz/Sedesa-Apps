@@ -5,7 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
 // Mengambil halaman UTAMA yg sudah dibuat
-import { HomePage } from '../pages/home/home';
+import { HomePage,HomePageKategori } from '../pages/home/home';
 import { UsulanPage } from '../pages/usulan/usulan';
 import { UsulanDusunPage } from '../pages/usulandusun/usulandusun';
 import { BeritaPage } from '../pages/berita/berita';
@@ -56,9 +56,9 @@ export class MyApp {
     ];
     this.pages_umum = [
       { title: 'Home', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
-      { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'informasi' },
-      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
-      { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'informasi' },
+      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
+      { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
       { title: 'Toko Desa', icon: "first-order", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
       /*{ title: 'Wisata', icon: "tree", color: "iconprimary" ,  component: InformasiPage, item: 1},
       { title: 'Kuliner', icon: "cutlery", color: "iconprimary" ,  component: InformasiPage, item: 2},
@@ -72,9 +72,9 @@ export class MyApp {
     ];
     this.pages_warga = [
       { title: 'Home', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
-      { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'informasi' },
-      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
-      { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'informasi' },
+      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
+      { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
       { title: 'Toko Desa', icon: "first-order", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
       /*{ title: 'Usulan Saya', icon: "edit", color: "iconprimary", component: UsulanPage },
       { title: 'Hasil Musyawarah',  icon: "calendar-check-o", color: "iconprimary", component: BeritaPage },
