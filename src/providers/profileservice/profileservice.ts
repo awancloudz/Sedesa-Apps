@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ProfileserviceProvider {
   private items:ProfileArray[]=[];
-  private url:string="http://forkomperbekelbali.com/desa/public/api/warga";
+  private url:string="https://indoneseo.primatexco.co.id/desa/public/api/warga";
   constructor(public _http: Http) {
   }
 

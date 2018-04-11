@@ -19,7 +19,7 @@ export class AntrianserviceProvider {
 //Deklarasi variabel
   private items:AntrianArray[]=[];
   //Memanggil URL Api
-  private url:string="http://forkomperbekelbali.com/desa/public/api/antrian";
+  private url:string="https://indoneseo.primatexco.co.id/desa/public/api/antrian";
   constructor(public _http: Http) {
   }
 

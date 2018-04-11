@@ -20,7 +20,7 @@ export class UsulanserviceProvider {
   //Deklarasi variabel
   private items:UsulanArray[]=[];
   //Memanggil URL Api
-  private url:string="http://forkomperbekelbali.com/desa/public/api/usulan";
+  private url:string="https://indoneseo.primatexco.co.id/desa/public/api/usulan";
   constructor(public _http: Http) {
   }
 

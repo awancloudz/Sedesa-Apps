@@ -20,9 +20,9 @@ export class LoginserviceProvider {
   //Deklarasi variabel
   private items:LoginArray[]=[];
   //Memanggil URL Api
-  private url:string="http://forkomperbekelbali.com/desa/public/api/loginuser";
-  private url2:string="http://forkomperbekelbali.com/desa/public/api/daftaruser";
-  private url3:string="http://forkomperbekelbali.com/desa/public/api/resetpassword";
+  private url:string="https://indoneseo.primatexco.co.id/desa/public/api/loginuser";
+  private url2:string="https://indoneseo.primatexco.co.id/desa/public/api/daftaruser";
+  private url3:string="https://indoneseo.primatexco.co.id/desa/public/api/resetpassword";
   constructor(public _http: Http) {
   }
 

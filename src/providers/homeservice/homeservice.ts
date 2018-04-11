@@ -21,10 +21,10 @@ export class HomeserviceProvider {
   private items:HomeArray[]=[];
   private items2:UsulanArray[]=[];
   //Memanggil URL Api
-  private url:string="http://forkomperbekelbali.com/desa/public/api/perangkat";
-  private url2:string="http://forkomperbekelbali.com/desa/public/api/usulanbaru";
-  //private awal:string="http://forkomperbekelbali.com/desa/public/api/halamanawal";
-  private awal:string="http://localhost:8000/api/halamanawal";
+  private url:string="https://indoneseo.primatexco.co.id/desa/public/api/perangkat";
+  private url2:string="https://indoneseo.primatexco.co.id/desa/public/api/usulanbaru";
+  //private awal:string="https://indoneseo.primatexco.co.id/desa/public/api/halamanawal";
+  private awal:string="https://indoneseo.primatexco.co.id/desa/public/api/halamanawal";
   constructor(public _http: Http) {
   }
     //Tampilkan home
