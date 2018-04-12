@@ -55,11 +55,11 @@ export class MyApp {
       { title: 'Login/Daftar',  icon: "sign-in", color: "iconprimary", component: LoginPage },
     ];
     this.pages_umum = [
-      { title: 'Home', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
-      { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'informasi' },
-      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'peranwarga' },
-      { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
-      { title: 'Toko Desa', icon: "first-order", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
+      { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Informasi', icon: "info-circle", color: "iconprimary" ,  component: HomePageKategori, item: 'informasi' },
+      { title: 'Peran Warga', icon: "handshake-o", color: "iconprimary" ,  component: HomePageKategori, item: 'peranwarga' },
+      { title: 'Kependudukan', icon: "users", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
+      { title: 'Toko Desa', icon: "shopping-basket", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
       /*{ title: 'Wisata', icon: "tree", color: "iconprimary" ,  component: InformasiPage, item: 1},
       { title: 'Kuliner', icon: "cutlery", color: "iconprimary" ,  component: InformasiPage, item: 2},
       { title: 'Event', icon: "calendar", color: "iconprimary" ,  component: InformasiPage, item: 3},
@@ -71,16 +71,16 @@ export class MyApp {
       { title: 'Layanan', icon: "slideshare", color: "iconprimary", component: '', item: ''},*/
     ];
     this.pages_warga = [
-      { title: 'Home', icon: "first-order", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
-      { title: 'Informasi', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'informasi' },
-      { title: 'Peran Warga', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'peranwarga' },
-      { title: 'Kependudukan', icon: "first-order", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
-      { title: 'Toko Desa', icon: "first-order", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
+      { title: 'Home', icon: "home", color: "iconprimary" ,  component: HomePage, item: 'kependudukan' },
+      { title: 'Informasi', icon: "info-circle", color: "iconprimary" ,  component: HomePageKategori, item: 'informasi' },
+      { title: 'Peran Warga', icon: "handshake-o", color: "iconprimary" ,  component: HomePageKategori, item: 'peranwarga' },
+      { title: 'Kependudukan', icon: "users", color: "iconprimary" ,  component: HomePageKategori, item: 'kependudukan' },
+      { title: 'Toko Desa', icon: "shopping-basket", color: "iconprimary", component: BelanjaPage, item: 'kependudukan' },
       /*{ title: 'Usulan Saya', icon: "edit", color: "iconprimary", component: UsulanPage },
       { title: 'Hasil Musyawarah',  icon: "calendar-check-o", color: "iconprimary", component: BeritaPage },
       { title: 'Pengaduan Saya',  icon: "list-alt", color: "iconprimary", component: PengaduanPage },
       { title: 'Layanan',  icon: "slideshare", color: "iconprimary", component: AntrianPage },*/
-      { title: 'Profile',  icon: "first-order", color: "iconprimary", component: ProfilePage, item: 'kependudukan' },
+      { title: 'Profile',  icon: "user", color: "iconprimary", component: ProfilePage, item: 'kependudukan' },
       { title: 'Logout',  icon: "sign-out", color: "iconprimary", component: SettingPage, item: 'kependudukan' },
     ];
 
