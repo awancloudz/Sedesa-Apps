@@ -20,7 +20,7 @@
       <ion-slides pager>
         <div *ngFor="let photo of items2.koleksifoto">
         <ion-slide *ngIf="item2.id == photo.id">
-          <img style="height: 300px; width: 300px; margin: auto; display: block;" src="https://indoneseo.primatexco.co.id/desa/public/fotoupload/{{photo.foto}}" class="slide-image">
+          <img style="height: 300px; width: 300px; margin: auto; display: block;" src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{photo.foto}}" class="slide-image">
           <ion-toolbar></ion-toolbar>
         </ion-slide>
         </div>
@@ -51,7 +51,7 @@
 <br>
 <ion-slides class="desa-home-slide">
   <ion-slide *ngFor="let item of items.daftarinformasi; let id = index">
-    <img src="https://indoneseo.primatexco.co.id/desa/public/fotoupload/{{ item.foto }}" class="slide-image" style="height: 70vh; width: auto; margin: auto; display: block;"/>
+    <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item.foto }}" class="slide-image" style="height: 70vh; width: auto; margin: auto; display: block;"/>
    </ion-slide>
 </ion-slides>
 
@@ -70,7 +70,7 @@
           <ion-col (click)="detailinformasi(item2)">
           <ion-buttons>
             <ion-card>
-            <img src="https://indoneseo.primatexco.co.id/desa/public/fotoupload/{{ item2.foto }}">
+            <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item2.foto }}">
             <p style="white-space: normal ; margin-top: 5px"><b>{{ item2.judul }}</b></p>
             <p style="font-size: 12px">{{ item2.created_at }} <!--Selasa, 00 Desember 0000. Jam 00:00 WIB--></p>
             </ion-card>
@@ -82,7 +82,7 @@
       <ion-buttons>
         <ion-row>
           <ion-col style="max-width: 80px">
-            <img src="https://indoneseo.primatexco.co.id/desa/public/fotoupload/{{ item2.foto }}" alt="Poster" style="width: 70px ; height: 70px">
+            <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item2.foto }}" alt="Poster" style="width: 70px ; height: 70px">
           </ion-col>
           <ion-col style="white-space: normal">
             <p style="font-size: 12px"><b>{{ item2.judul }}</b></p>

@@ -569,7 +569,7 @@ export class UsulancreatePage {
       headers: {}
     }
   
-    fileTransfer.upload(this.imageURI, 'https://indoneseo.primatexco.co.id/desa/public/api/upload', options)
+    fileTransfer.upload(this.imageURI, 'http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/upload', options)
       .then((data) => {
       this.imageFileName = "upload.jpg";
       loader.dismiss();
@@ -650,7 +650,7 @@ export class UsulancreatePage {
       headers: {}
     }
   
-    fileTransfer.upload(this.fileURI, 'https://indoneseo.primatexco.co.id/desa/public/api/uploadproposal', options)
+    fileTransfer.upload(this.fileURI, 'http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/uploadproposal', options)
       .then((data) => {
       this.fileFileName = "upload.jpg";
       loader.dismiss();
@@ -678,7 +678,7 @@ export class UsulancreatePage {
       headers: {}
     }
   
-    fileTransfer.upload(this.fileURI, 'https://indoneseo.primatexco.co.id/desa/public/api/uploadproposal', options)
+    fileTransfer.upload(this.fileURI, 'http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/uploadproposal', options)
       .then((data) => {
       this.fileFileName = "upload.jpg";
       loader2.dismiss();
@@ -999,7 +999,7 @@ export class UsulaneditPage {
       headers: {}
     }
   
-    fileTransfer.upload(this.imageURI, 'https://indoneseo.primatexco.co.id/desa/public/api/upload', options)
+    fileTransfer.upload(this.imageURI, 'http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/upload', options)
       .then((data) => {
       this.imageFileName = "upload.jpg";
       loader.dismiss();
@@ -1080,7 +1080,7 @@ export class UsulaneditPage {
       headers: {}
     }
   
-    fileTransfer.upload(this.fileURI, 'https://indoneseo.primatexco.co.id/desa/public/api/uploadproposal', options)
+    fileTransfer.upload(this.fileURI, 'http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/uploadproposal', options)
       .then((data) => {
       this.fileFileName = "upload.jpg";
       loader.dismiss();
@@ -1097,7 +1097,7 @@ export class UsulaneditPage {
       this.platform.ready().then(() => {
         const fileTransfer:FileTransferObject = this.transfer.create();
         //const imageLocation = `${this.file.applicationDirectory}www/assets/img/${element}`;
-        const imageLocation = `https://indoneseo.primatexco.co.id/desa/public/fotoupload/${element}`;
+        const imageLocation = `http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/${element}`;
 
         fileTransfer.download(imageLocation, this.file.applicationStorageDirectory + element).then((entry) => {
           this.photos.push(entry.toURL());
@@ -1112,7 +1112,7 @@ export class UsulaneditPage {
       this.platform.ready().then(() => {
         const fileTransfer:FileTransferObject = this.transfer.create();
         //const imageLocation = `${this.file.applicationDirectory}www/assets/img/${element}`;
-        const imageLocation = `https://indoneseo.primatexco.co.id/desa/public/fileupload/${element}`;
+        const imageLocation = `http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fileupload/${element}`;
 
         fileTransfer.download(imageLocation, this.file.applicationStorageDirectory + element).then((entry) => {
           this.files.push(entry.toURL());

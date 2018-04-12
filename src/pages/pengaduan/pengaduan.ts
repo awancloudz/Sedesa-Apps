@@ -554,7 +554,7 @@ export class PengaduancreatePage {
       headers: {}
     }
   
-    fileTransfer.upload(this.imageURI, 'https://indoneseo.primatexco.co.id/desa/public/api/uploadpengaduan', options)
+    fileTransfer.upload(this.imageURI, 'http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/uploadpengaduan', options)
     //fileTransfer.upload(this.imageURI, 'http://192.168.43.19:8000/api/upload', options)
       .then((data) => {
       this.imageFileName = "upload.jpg";

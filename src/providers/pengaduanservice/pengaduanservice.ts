@@ -19,7 +19,7 @@ export class PengaduanserviceProvider {
 //Deklarasi variabel
   private items:PengaduanArray[]=[];
   //Memanggil URL Api
-  private url:string="https://indoneseo.primatexco.co.id/desa/public/api/pengaduan";
+  private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/pengaduan";
   constructor(public _http: Http) {
   }
 

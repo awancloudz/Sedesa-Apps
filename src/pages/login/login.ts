@@ -229,7 +229,7 @@ uploadFile() {
     headers: {}
   }
   
-  fileTransfer.upload(this.imageURI, 'https://indoneseo.primatexco.co.id/desa/public/api/uploadktp', options)
+  fileTransfer.upload(this.imageURI, 'http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/uploadktp', options)
     .then((data) => {
     this.imageFileName = "image.jpg";
     loader.dismiss();
@@ -257,7 +257,7 @@ uploadFile2() {
     headers: {}
   }
   
-  fileTransfer2.upload(this.imageURI2, 'https://indoneseo.primatexco.co.id/desa/public/api/uploadwajah', options2)
+  fileTransfer2.upload(this.imageURI2, 'http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/uploadwajah', options2)
     .then((data2) => {
     this.imageFileName2 = "image.jpg";
     loader.dismiss();

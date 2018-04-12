@@ -19,7 +19,7 @@ export class AntrianserviceProvider {
 //Deklarasi variabel
   private items:AntrianArray[]=[];
   //Memanggil URL Api
-  private url:string="https://indoneseo.primatexco.co.id/desa/public/api/antrian";
+  private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/antrian";
   constructor(public _http: Http) {
   }
 
