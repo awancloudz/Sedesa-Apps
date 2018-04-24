@@ -23,39 +23,21 @@
 
   <ion-content>
       <ion-list *ngIf="level == 'umum'">
-        <button menuClose ion-item icon-left *ngFor="let p of pages_umum" (click)="openPage(p)">
-            <ion-grid>
-              <ion-row style="height: 15px">
-                <ion-col col-2 style="margin-top: -10px" ><i class="fa fa-{{p.icon}} {{p.color}} {{p.size}}" aria-hidden="true" style="font-size:25px"></i></ion-col>
-                <ion-col col-10 style="margin-top: -7px" >{{p.title}}</ion-col>
-              </ion-row>
-            </ion-grid>
-            <!--<i class="fa fa-{{p.icon}} {{p.color}} {{p.size}}" aria-hidden="true" style="font-size:25px"></i>
-            {{p.title}}-->
+        <button menuClose ion-item *ngFor="let p of pages_umum" (click)="openPage(p)">
+            {{p.title}}
+          <img width="35px" height="35px" src="{{ p.icon }}" item-left>
         </button>
     </ion-list>
     <ion-list *ngIf="level == 'warga'">
-        <button menuClose ion-item icon-left *ngFor="let p of pages_warga" (click)="openPage(p)">
-            <ion-grid>
-              <ion-row style="height: 15px">
-                <ion-col col-2 style="margin-top: -10px" ><i class="fa fa-{{p.icon}} {{p.color}} {{p.size}}" aria-hidden="true" style="font-size:25px"></i></ion-col>
-                <ion-col col-10 style="margin-top: -7px" >{{p.title}}</ion-col>
-              </ion-row>
-            </ion-grid>
-            <!--<i class="fa fa-{{p.icon}} {{p.color}} {{p.size}}" aria-hidden="true" style="font-size:25px"></i>
-            {{p.title}}-->
+        <button menuClose ion-item *ngFor="let p of pages_warga" (click)="openPage(p)">
+            {{p.title}}
+          <img width="35px" height="35px" src="{{ p.icon }}" item-left>
           </button>
     </ion-list>
     <ion-list *ngIf="level == 'dusun'">
-        <button menuClose ion-item icon-left *ngFor="let p of pages_dusun" (click)="openPage(p)">
-            <ion-grid>
-              <ion-row style="height: 15px">
-                <ion-col col-2 style="margin-top: -10px" ><i class="fa fa-{{p.icon}} {{p.color}} {{p.size}}" aria-hidden="true" style="font-size:25px"></i></ion-col>
-                <ion-col col-10 style="margin-top: -7px" >{{p.title}}</ion-col>
-              </ion-row>
-            </ion-grid>
-            <!--<i class="fa fa-{{p.icon}} {{p.color}} {{p.size}}" aria-hidden="true" style="font-size:25px"></i>
-            {{p.title}}-->
+        <button menuClose ion-item *ngFor="let p of pages_dusun" (click)="openPage(p)">
+            {{p.title}}
+          <img width="35px" height="35px" src="{{ p.icon }}" item-left>
           </button>
     </ion-list>
   </ion-content>

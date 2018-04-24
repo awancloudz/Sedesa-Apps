@@ -25,12 +25,12 @@
   <!-- JIKA INFORMASI -->
   <div *ngIf="item == 'informasi'">
     <ion-list style="margin-top: -10px">
-        <ion-row style="margin-left: -15px">
+        <ion-row style="margin-left: -19px">
           <ion-col style="margin-right: -20px" (click)="tb_wisata()">
             <ion-buttons>
             <ion-card class="menu_card">
               <img src="pariwisata.png" class="menu_icon">
-              <p class="menu_title">Pariwisata</p>
+              <p class="menu_title"><b>Pariwisata</b></p>
             </ion-card>
           </ion-buttons>
           </ion-col>
@@ -39,7 +39,7 @@
             <ion-buttons>
               <ion-card class="menu_card">
                 <img src="kuliner.png" class="menu_icon">
-                <p class="menu_title">Kuliner</p>
+                <p class="menu_title"><b>Kuliner</b></p>
               </ion-card>
             </ion-buttons>
           </ion-col>
@@ -48,18 +48,18 @@
             <ion-buttons>
               <ion-card class="menu_card">
                 <img src="berita.png" class="menu_icon">
-                <p class="menu_title">Berita</p>
+                <p class="menu_title"><b>Berita</b></p>
               </ion-card>
             </ion-buttons>
           </ion-col>
         </ion-row>
       
-        <ion-row style="margin-left: -15px ; margin-top: -15px" (click)="tb_event()">
+        <ion-row style="margin-left: -19px ; margin-top: -15px" (click)="tb_event()">
           <ion-col style="margin-right: -20px">
-            <ion-buttons>
+            <ion-buttons >
               <ion-card class="menu_card">
                 <img src="event.png" class="menu_icon">
-                <p class="menu_title">Event</p>
+                <p class="menu_title"><b>Event</b></p>
               </ion-card>
             </ion-buttons>
           </ion-col>
@@ -68,7 +68,7 @@
             <ion-buttons>
               <ion-card class="menu_card">
                 <img src="investasi.png" class="menu_icon">
-                <p class="menu_title">Investasi</p>
+                <p class="menu_title"><b>Investasi</b></p>
               </ion-card>
             </ion-buttons>
           </ion-col>
@@ -76,34 +76,34 @@
           <ion-col style="margin-right: -17px" (click)="tb_harga()">
             <ion-buttons>
               <ion-card class="menu_card">
-                  <img src="info_harga.png" class="menu_icon">
-                  <p class="menu_title">Harga Pangan</p>
+                <img src="harga_pangan.png" class="menu_icon">
+                <p style="text-transform: none; margin-top: 9px; text-align: center; line-height: 1.0"><b>Harga Pangan</b></p>
               </ion-card>
             </ion-buttons>
           </ion-col>
         </ion-row>
-        <button ion-button block (click)="semuaposting()">Lihat Semua</button>
+        <button ion-button block style="text-transform: none" (click)="semuaposting()">Lihat Semua</button>
       </ion-list>
   </div>
 
   <!-- JIKA PERAN WARGA -->
   <div *ngIf="item == 'peranwarga'">
     <ion-list style="margin-top: -10px">
-      <ion-row style="margin-left: -15px">
-        <ion-col style="margin-right: -20px">
+      <ion-row style="margin-left: -19px">
+        <ion-col style="margin-right: -16px">
             <ion-card class="menu_card">
               <ion-buttons>
-                <img src="posting.png" style="width: 55px ; height: 55px ; margin: 0 auto ; margin-top: 15px">
-                  <p style="text-transform: none;margin-top: 10px;text-align: center">Posting</p>
+                  <img src="posting.png" class="menu_icon">
+                  <p class="menu_title"><b>Posting</b></p>
               </ion-buttons>
             </ion-card>
         </ion-col>
     
-        <ion-col style="margin-right: -20px">
+        <ion-col style="margin-right: -16px">
             <ion-card class="menu_card">
               <ion-buttons>
                 <img src="usulan.png" class="menu_icon">
-                  <p class="menu_title">Usulan</p>
+                  <p class="menu_title"><b>Usulan</b></p>
               </ion-buttons>
             </ion-card>
         </ion-col>
@@ -112,7 +112,7 @@
             <ion-card class="menu_card">
               <ion-buttons>
                 <img src="pengaduan.png" class="menu_icon">
-                <p class="menu_title">Pengaduan</p>
+                <p class="menu_title"><b>Pengaduan</b></p>
               </ion-buttons>
             </ion-card>
         </ion-col>
@@ -123,31 +123,32 @@
   
   <!-- JIKA KEPENDUDUKAN -->
   <div *ngIf="item == 'kependudukan'">
-    <ion-list style="margin-top: -10px">
-      <ion-row style="margin-left: -15px ; margin-top: -15px">
-        <ion-col style="margin-right: -20px">
-          <ion-card class="menu_card">
-            <ion-buttons>
-            <img src="layanan.png" style="width: 55px ; height: 55px ; margin: 0 auto ; margin-top: 15px">
-            <p style="text-transform: none;margin-top: 10px;text-align: center">Layanan</p>
-            </ion-buttons>
-          </ion-card>
-        </ion-col>
-    
-        <ion-col style="margin-right: -20px">
-            <ion-buttons>
-              <ion-card class="menu_card">
-                <img src="pemetaan.png" class="menu_icon">
-                <p class="menu_title">Pemetaan</p>
-              </ion-card>
-            </ion-buttons>
-        </ion-col>
-  
-        <ion-col style="margin-right: -17px">
-
-        </ion-col>
-      </ion-row>
-    </ion-list>
+      <ion-list style="margin-top: -10px">
+          <ion-row style="margin-left: -19px">
+            <ion-col style="margin-right: -16px">
+                <ion-card class="menu_card">
+                  <ion-buttons>
+                      <img src="layanan.png" class="menu_icon">
+                      <p class="menu_title"><b>Layanan</b></p>
+                  </ion-buttons>
+                </ion-card>
+            </ion-col>
+        
+            <ion-col style="margin-right: -16px">
+                <ion-card class="menu_card">
+                  <ion-buttons>
+                      <img src="pemetaan.png" class="menu_icon">
+                      <p class="menu_title"><b>Pemetaan</b></p>
+                  </ion-buttons>
+                </ion-card>
+            </ion-col>
+      
+            <ion-col style="margin-right: -17px">
+               
+            </ion-col>
+          </ion-row>
+      
+        </ion-list>
   </div>
   </ion-content>
   
