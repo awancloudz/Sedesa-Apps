@@ -24,6 +24,10 @@ export class InformasiserviceProvider {
   constructor(public _http: Http) {
     
   }
+  tampilkanuser(iduser){
+    return this._http.get(this.url+"/user/"+iduser)
+    .map((response:Response)=>response.json());
+  }
   tampilkansemua(){
     return this._http.get(this.url)
     .map((response:Response)=>response.json());

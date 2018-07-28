@@ -127,7 +127,7 @@ ionViewWillEnter(item){
     this.home_menu = this.item;
   }
   else{
-    this.home_menu = "kependudukan";
+    this.home_menu = "peranwarga";
   }
 }
 

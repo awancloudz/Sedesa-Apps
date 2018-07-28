@@ -4,6 +4,8 @@ import { IonicPage,NavController,AlertController,Platform,LoadingController,NavP
 import { InformasiserviceProvider } from '../../providers/informasiservice/informasiservice';
 import { InformasiArray } from '../../pages/informasi/informasiarray';
 import { KomentarArray } from './komentararray';
+
+import { Storage } from '@ionic/storage';
 /**
  * Generated class for the InformasiPage page.
  *
@@ -21,8 +23,14 @@ export class InformasiPage {
   items:InformasiArray[]=[];
   constructor(
     public navCtrl: NavController, public navParams: NavParams,public loadincontroller:LoadingController,
-    public informasiservice:InformasiserviceProvider,public alertCtrl: AlertController,params: NavParams) {
-      this.item = params.data.item;
+    public informasiservice:InformasiserviceProvider,public alertCtrl: AlertController,params: NavParams,
+    public platform: Platform) {
+    this.item = params.data.item;
+    //Hapus Back
+    let backAction =  platform.registerBackButtonAction(() => {
+      this.navCtrl.pop();
+      backAction();
+    },2)
   }
 
   ionViewDidLoad(item) {
@@ -35,7 +43,6 @@ export class InformasiPage {
       message: 'Silahkan Periksa koneksi internet anda...',
     });
     loadingdata.present();
-    console.log(this.item);
       //Tampilkan data dari server
       this.informasiservice.tampilkaninformasi(this.item).subscribe(
         //Jika data sudah berhasil di load
@@ -56,6 +63,9 @@ export class InformasiPage {
         }
     );
   }
+  userposting(){
+    this.navCtrl.push(InformasiUserPage);
+  }
   detailinformasi(item){
     this.navCtrl.push(DetailInformasiPage, { item: item});
   }
@@ -70,8 +80,14 @@ export class InformasiAllPage {
   items:InformasiArray[]=[];
   constructor(
     public navCtrl: NavController, public navParams: NavParams,public loadincontroller:LoadingController,
-    public informasiservice:InformasiserviceProvider,public alertCtrl: AlertController,params: NavParams) {
-      this.item = params.data.item;
+    public informasiservice:InformasiserviceProvider,public alertCtrl: AlertController,params: NavParams,
+    public platform: Platform) {
+    this.item = params.data.item;
+    //Hapus Back
+    let backAction =  platform.registerBackButtonAction(() => {
+      this.navCtrl.pop();
+      backAction();
+    },2)
   }
 
   ionViewDidLoad(item) {
@@ -105,6 +121,73 @@ export class InformasiAllPage {
         }
     );
   }
+  userposting(){
+    this.navCtrl.push(InformasiUserPage);
+  }
+  detailinformasi(item){
+    this.navCtrl.push(DetailInformasiPage, { item: item});
+  }
+}
+
+@Component({
+  selector: 'page-informasi',
+  templateUrl: 'informasi-user.html',
+})
+export class InformasiUserPage {
+  informasi:String;
+  items:InformasiArray[]=[];
+  constructor(
+    public navCtrl: NavController, public navParams: NavParams,public loadincontroller:LoadingController,
+    public informasiservice:InformasiserviceProvider,public alertCtrl: AlertController,params: NavParams,
+    public platform: Platform,private storage: Storage) {
+    //Hapus Back
+    let backAction =  platform.registerBackButtonAction(() => {
+      this.navCtrl.pop();
+      backAction();
+    },2)
+  }
+
+  ionViewDidLoad() {
+    this.informasi = "informasi";
+    //Loading bar
+    let loadingdata=this.loadincontroller.create({
+      content:"Loading..."
+    });
+    let info = this.alertCtrl.create({
+      title: 'Tidak Terhubung ke server',
+      message: 'Silahkan Periksa koneksi internet anda...',
+    });
+    loadingdata.present();
+    //Ambil data ID dari storage
+    this.storage.get('id_user').then((iduser) => {
+      if(iduser == null ){
+        alert("Maaf,anda belum login. Silahkan login terlebih dahulu untuk posting.")
+        loadingdata.dismiss();
+        this.navCtrl.pop();
+      }
+      else{
+        //Tampilkan data dari server
+        this.informasiservice.tampilkanuser(iduser).subscribe(
+          //Jika data sudah berhasil di load
+          (data:InformasiArray[])=>{
+            this.items=data;
+          },
+          //Jika Error
+          function (error){  
+            //Jika Koneksi Tidak ada
+            if(error.status == 0){
+              info.present();
+            }
+            loadingdata.dismiss(); 
+          },
+          //Tutup Loading
+          function(){
+            loadingdata.dismiss();
+          }
+        );
+      }
+    });
+  }
   detailinformasi(item){
     this.navCtrl.push(DetailInformasiPage, { item: item});
   }
@@ -119,8 +202,14 @@ export class DetailInformasiPage {
   items:InformasiArray[]=[];
   constructor(
     public navCtrl: NavController, public navParams: NavParams,public loadincontroller:LoadingController,
-    public informasiservice:InformasiserviceProvider,public alertCtrl: AlertController,params: NavParams) {
-      this.item = params.data.item;
+    public informasiservice:InformasiserviceProvider,public alertCtrl: AlertController,params: NavParams,
+    public platform: Platform) {
+    this.item = params.data.item;
+    //Hapus Back
+    let backAction =  platform.registerBackButtonAction(() => {
+      this.navCtrl.pop();
+      backAction();
+    },2)
   }
 
   ionViewDidLoad(item) {

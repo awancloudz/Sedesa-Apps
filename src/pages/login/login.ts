@@ -72,20 +72,21 @@ ceklogin(){
       //Seleksi Data dari server
       for(var key in data)
       {
-         if((data[key].noktp != null) && (data[key].password != null)){
+         if((data[key].username != null) && (data[key].password != null)){
             //Redirect menuju ke root HomePage * Wajib *
             this.storage.set('id_user', data[key].id);
-            this.storage.set('nama_warga', data[key].nama);
-            this.storage.set('no_ktp', data[key].noktp);
+            this.storage.set('nama_warga', data[key].name);
+            this.storage.set('no_ktp', data[key].username);
             this.storage.set('level', data[key].level);
             this.storage.set('id_dusun', data[key].id_dusun);
-            this.storage.set('id_desa', data[key].id_profiledesa);
+            //this.storage.set('id_desa', data[key].id_profiledesa);
+            this.storage.set('id_desa', 1);
             //Verifikasi Level Login
             if(data[key].level == "warga"){
-              this.events.publish('user:warga',data[key].nama);
+              this.events.publish('user:warga',data[key].name);
             }
             else if(data[key].level == "dusun"){
-              this.events.publish('user:dusun',data[key].nama);
+              this.events.publish('user:dusun',data[key].name);
             }
             //Check App ID Notifikasi
             this.oneSignal.getIds().then((ids) => {
