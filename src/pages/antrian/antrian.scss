@@ -1,3 +1,101 @@
 page-antrian {
 
 }
+/* Area Antrian Realtime */
+.antrian-realtime-col {
+    border-radius: 5px;
+    margin: 0px;
+    width: auto;
+    height: 100px;
+}
+
+.antrian-realtime-col h4 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.antrian-realtime-col p {
+    background-color: whitesmoke;
+    font-size: 18px;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+
+/* Area Antrian Create */
+.antrian-create-col {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin: 0px auto;
+    width: 55%;
+    height: 150px;
+}
+
+.antrian-create-akordion {
+    position: relative;
+    margin: 5px 15px;
+    width: auto;
+    overflow: hidden;
+    color: white;
+}
+
+.antrian-create-akordion input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.antrian-create-akordion label {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 37px;
+    background-color: #2ECC71;
+  }
+
+.antrian-create-akordion-content {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .35s;
+    transition: max-height .35s;
+}
+
+.antrian-create-akordion input:checked ~ .antrian-create-akordion-content {
+    max-height: 100vh;
+  }
+
+.antrian-create-akordion label::after {
+  position: absolute;
+  right: 0;
+  margin-top: -37px;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.antrian-create-akordion input[type=checkbox] + label::after {
+    content: "<";
+    font-size: 20px;
+}
+
+.antrian-create-akordion input[type=checkbox]:checked + label::after {
+    transform: rotate(-90deg);
+}
+
+.antrian-create-akordion-content ion-slides {
+    height: 200px;
+}
+
+.antrian-create-akordion-content ion-slide img {
+    height: 190px;
+    margin: 0 auto;
+}

@@ -1,0 +1,289 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Buat Antrian</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div style="margin-right: 7px">
+        <ion-item no-lines>
+            <ion-label stacked style="color: black">Kategori Antrian</ion-label>
+            <ion-select interface="popover" style="border: 1px solid gray; border-radius: 5px; padding-left: 8px">
+                <ion-option ion-item>Kategori 1</ion-option>
+                <ion-option ion-item>Kategori 2</ion-option>
+                <ion-option ion-item>Kategori 3</ion-option>
+                <ion-option ion-item>Kategori 4</ion-option>
+                <ion-option ion-item>Kategori 5</ion-option>
+                <ion-option ion-item>Kategori 6</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item no-lines>
+            <ion-label stacked style="color: black">Tanggal Pengambilan</ion-label>
+            <ion-datetime displayFormat="DD MMM YYYY" min="2015" [(ngModel)]="tanggal"
+                monthShortNames="Jan, Feb, Mar, Apr, Mei, Jun, Jul, Agt, Sept, Okt, Nov, Des" doneText="Pilih" cancelText="Batal" style="border: 1px solid gray; border-radius: 5px; padding-left: 8px; padding-top: 8px; height: 37px">
+            </ion-datetime>
+        </ion-item>
+    </div>
+    
+    <div>
+        <h5 style="text-align: center">Persyaratan yang harus dibawa</h5>
+    </div>
+
+    <ion-card class="antrian-create-akordion">
+        <input id="acc-1" type="checkbox" name="id1">
+        <label for="acc-1">Syarat Pertama</label>
+        <div class="antrian-create-akordion-content">
+            <ion-slides pager="true" loop="true" zoom="true">
+                <ion-slide>
+                    <img src="antrian_sample_image/placeholder1.png">
+                </ion-slide>
+            </ion-slides>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-card>
+
+    <ion-card class="antrian-create-akordion">
+        <input id="acc-2" type="checkbox" name="id2">
+        <label for="acc-2">Syarat Kedua</label>
+        <div class="antrian-create-akordion-content">
+            <ion-slides pager="true" loop="true" zoom="true">
+                <ion-slide>
+                    <img src="antrian_sample_image/placeholder2.png">
+                </ion-slide>
+            </ion-slides>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-card>
+
+    <ion-card class="antrian-create-akordion">
+        <input id="acc-3" type="checkbox" name="id3">
+        <label for="acc-3">Syarat Ketiga</label>
+        <div class="antrian-create-akordion-content">
+            <ion-slides pager="true" loop="true" zoom="true">
+                <ion-slide>
+                    <img src="antrian_sample_image/placeholder3.png">
+                </ion-slide>
+            </ion-slides>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-card>
+
+    <ion-card class="antrian-create-akordion">
+        <input id="acc-4" type="checkbox" name="id4">
+        <label for="acc-4">Syarat Keempat</label>
+        <div class="antrian-create-akordion-content">
+            <ion-slides pager="true" loop="true" zoom="true">
+                <ion-slide>
+                    <img src="antrian_sample_image/placeholder4.png">
+                </ion-slide>
+            </ion-slides>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-card>
+
+    <ion-card class="antrian-create-akordion">
+        <input id="acc-5" type="checkbox" name="id5">
+        <label for="acc-5">Syarat Kelima</label>
+        <div class="antrian-create-akordion-content">
+            <ion-slides pager="true" loop="true" zoom="true">
+                <ion-slide>
+                    <img src="antrian_sample_image/placeholder5.png">
+                </ion-slide>
+            </ion-slides>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-card>
+
+    <!-- <div style="margin-right: 7px">
+        <div style="border-radius: 5px; border: 1px solid gray; margin: 10px 8px 10px 15px; width: auto">
+            <ion-title style="text-align: center; margin: 10px 0px">Syarat Pertama</ion-title>
+            <ion-slides style="height: 150px" pager="true" loop="true" zoom="true">
+                <ion-slide>
+                    <img src="antrian_sample_image/placeholder1.png" style="height: 140px">
+                </ion-slide>
+            </ion-slides>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+        <div style="border-radius: 5px; border: 1px solid gray; margin: 10px 8px 10px 15px; width: auto">
+                <ion-title style="text-align: center; margin: 10px 0px">Syarat Kedua</ion-title>
+                <ion-slides style="height: 150px" pager="true" loop="true" zoom="true">
+                    <ion-slide>
+                        <img src="antrian_sample_image/placeholder2.png" style="height: 140px">
+                    </ion-slide>
+                </ion-slides>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-6>
+                            <button ion-button full style="text-transform: none ; text-align: center">
+                                <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                            </button>
+                        </ion-col>
+                        <ion-col col-6>
+                            <button ion-button full style="text-transform: none ; text-align: center">
+                                <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        
+            <div style="border-radius: 5px; border: 1px solid gray; margin: 10px 8px 10px 15px; width: auto">
+                    <ion-title style="text-align: center; margin: 10px 0px">Syarat Ketiga</ion-title>
+                    <ion-slides style="height: 150px" pager="true" loop="true" zoom="true">
+                        <ion-slide>
+                            <img src="antrian_sample_image/placeholder3.png" style="height: 140px">
+                        </ion-slide>
+                    </ion-slides>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-6>
+                                <button ion-button full style="text-transform: none ; text-align: center">
+                                    <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                                </button>
+                            </ion-col>
+                            <ion-col col-6>
+                                <button ion-button full style="text-transform: none ; text-align: center">
+                                    <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                                </button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+
+                <div style="border-radius: 5px; border: 1px solid gray; margin: 10px 8px 10px 15px; width: auto">
+                        <ion-title style="text-align: center; margin: 10px 0px">Syarat Keempat</ion-title>
+                        <ion-slides style="height: 150px" pager="true" loop="true" zoom="true">
+                            <ion-slide>
+                                <img src="antrian_sample_image/placeholder4.png" style="height: 140px">
+                            </ion-slide>
+                        </ion-slides>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-6>
+                                    <button ion-button full style="text-transform: none ; text-align: center">
+                                        <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                                    </button>
+                                </ion-col>
+                                <ion-col col-6>
+                                    <button ion-button full style="text-transform: none ; text-align: center">
+                                        <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                                    </button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+
+                    <div style="border-radius: 5px; border: 1px solid gray; margin: 10px 8px 10px 15px; width: auto">
+                            <ion-title style="text-align: center; margin: 10px 0px">Syarat Kelima</ion-title>
+                            <ion-slides style="height: 150px" pager="true" loop="true" zoom="true">
+                                <ion-slide>
+                                    <img src="antrian_sample_image/placeholder5.png" style="height: 140px">
+                                </ion-slide>
+                            </ion-slides>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col col-6>
+                                        <button ion-button full style="text-transform: none ; text-align: center">
+                                            <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                                        </button>
+                                    </ion-col>
+                                    <ion-col col-6>
+                                        <button ion-button full style="text-transform: none ; text-align: center">
+                                            <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                                        </button>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </div>
+    </div> -->
+
+    
+</ion-content>
+<ion-footer>
+    <ion-buttons>
+        <button ion-button block style="text-transform: none; font-size: 16px">Confirm</button>
+    </ion-buttons>
+</ion-footer>

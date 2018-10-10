@@ -58,7 +58,7 @@ export class PengaduanPage {
       });
     });
   }
-  doRefresh(refresher) {
+/*   doRefresh(refresher) {
     //console.log('Begin async operation', refresher);
     setTimeout(() => {
       this.ionViewDidLoad();
@@ -88,7 +88,7 @@ export class PengaduanPage {
         loadingdata.dismiss();
       }
     );
-  }
+  } */
 
   //Action ketika tombol di klik
   tomboldetail(item) {
@@ -197,7 +197,7 @@ constructor (public platform: Platform,private googleMaps: GoogleMaps, params: N
   },2)
 }
 
-ionViewDidLoad() {
+/* ionViewDidLoad() {
   //Loading bar
   let loadingdata=this.loadincontroller.create({
     content:"Loading..."
@@ -219,7 +219,7 @@ ionViewDidLoad() {
   );
   this.loadMap(this.item);
   
-}
+} */
 
 loadMap(item) {
   let mapOptions: GoogleMapOptions = {
@@ -358,7 +358,7 @@ export class PengaduancreatePage {
     },2)
     }
   //Tampil data awal
-  ionViewDidLoad() {
+/*   ionViewDidLoad() {
     //Loading bar
     let loadingdata=this.loadincontroller.create({
       content:"Loading..."
@@ -385,7 +385,7 @@ export class PengaduancreatePage {
       this.placesService = new google.maps.places.PlacesService(this.maps.map);
       this.searchDisabled = false;
     });
-  }
+  } */
   //Pencarian MAP
   selectPlace(place){
     //Kosongkan data
@@ -647,7 +647,7 @@ export class PengaduaneditPage {
   }
   
   //Tampil data awal
-  ionViewDidLoad() {
+/*   ionViewDidLoad() {
     //Loading bar
     let loadingdata=this.loadincontroller.create({
       content:"Loading..."
@@ -668,7 +668,7 @@ export class PengaduaneditPage {
       }
     );
     this.loadMap3(this.item);
-  }
+  } */
   loadMap3(item) {
 
     let mapOptions3: GoogleMapOptions = {

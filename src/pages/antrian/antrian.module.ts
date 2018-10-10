@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { AntrianPage } from './antrian';
+import { AntrianPage, AntriancreatePage, AntrianrealtimePage } from './antrian';
 
 @NgModule({
   declarations: [
-    AntrianPage,
+    AntrianPage, AntriancreatePage, AntrianrealtimePage,
   ],
   imports: [
     IonicPageModule.forChild(AntrianPage),

@@ -2,6 +2,16 @@ page-home {
 
     .desa-home-slide {
         height: 40%;
+        margin-bottom: 10px;
+    }
+
+    .small-thumbnail-title {
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.1;
     }
     
     .menu_icon {
@@ -16,7 +26,7 @@ page-home {
         border-radius: 10px;
         height : 115px;
         width: auto;
-        align-items: center;
+        margin: 0px
     }
     
     .menu_title {
@@ -24,5 +34,6 @@ page-home {
         margin-top: 5px;
         text-align: center;
     }
+
 }
     

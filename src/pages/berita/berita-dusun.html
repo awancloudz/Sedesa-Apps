@@ -7,13 +7,39 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-    <ion-list *ngFor="let item of items.koleksi">
+<ion-content style="background-color: whitesmoke">
+    <!-- <ion-list *ngFor="let item of items.koleksi">
       <p *ngFor="let item2 of items.koleksi2">
         <button ion-item *ngIf="item.id == item2.id_warga" (click)="tomboldetail(item2)">
         {{ item2.judul }}
         <ion-icon name='ios-arrow-forward' item-end></ion-icon>
         </button>
       </p>
-    </ion-list>
+    </ion-list> -->
+
+  <ion-list style="margin-top: -2px">
+    <ion-card style="margin: 3px 0px; width: auto">
+      <button ion-item (click)="tomboldetail(item2)">
+        Judul Usulan 1
+        <p style="font-size: 12px; color: gray">00 Desember 2018. 00:00</p>
+        <ion-icon name='ios-arrow-forward' item-end></ion-icon>
+      </button>
+    </ion-card>
+    
+    <ion-card style="margin: 3px 0px; width: auto">
+      <button ion-item (click)="tomboldetail(item2)">
+        Judul Usulan 2
+        <p style="font-size: 12px; color: gray">00 Desember 2018. 00:00</p>
+        <ion-icon name='ios-arrow-forward' item-end></ion-icon>
+      </button>
+    </ion-card>
+    
+    <ion-card style="margin: 3px 0px; width: auto">
+      <button ion-item (click)="tomboldetail(item2)">
+        Judul Usulan 3
+        <p style="font-size: 12px; color: gray">00 Desember 2018. 00:00</p>
+        <ion-icon name='ios-arrow-forward' item-end></ion-icon>
+      </button>
+    </ion-card>
+  </ion-list>
 </ion-content>

@@ -52,7 +52,7 @@ export class BeritaPage {
     });
   }
 
-  ionViewDidLoad() {
+/*   ionViewDidLoad() {
 
     let loadingdata=this.loadincontroller.create({
       content:"Loading..."
@@ -71,7 +71,7 @@ export class BeritaPage {
         }
       );
     });
-  }
+  } */
   tomboldetail(item) {
     this.nav.push(BeritaDusunPage, { item: item });
   }
@@ -173,7 +173,7 @@ export class BeritaDetailPage {
     },2)
   }
 
-  ionViewDidLoad() {
+/*   ionViewDidLoad() {
     //Loading bar
     let loadingdata=this.loadincontroller.create({
       content:"Loading..."
@@ -200,7 +200,7 @@ export class BeritaDetailPage {
     });
     this.loadMap(this.item);
     
-  }
+  } */
   
   loadMap(item) {
     let mapOptions: GoogleMapOptions = {

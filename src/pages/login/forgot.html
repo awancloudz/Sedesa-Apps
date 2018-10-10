@@ -16,17 +16,21 @@
     
     </ion-navbar>
   
-  </ion-header>
-<ion-content padding class="card-background-page">
-    <ion-list>
-    <p padding>Masukkan alamat email anda agar kami dapat mengirim tautan untuk mengatur ulang password anda.</p>
-      <ion-item>
+</ion-header>
+
+<ion-content class="card-background-page">
+    
+    <div>
+      <p style="margin: 15px">Masukkan alamat email anda agar kami dapat mengirim tautan untuk mengatur ulang password anda.</p>
+        
+      <ion-item style="padding-right: 7px" no-lines>
         <ion-label floating>Email</ion-label>
-        <ion-input type="text" [(ngModel)]="email"></ion-input>
+        <ion-input type="text" style="border-bottom: 1px solid gainsboro" [(ngModel)]="email"></ion-input>
       </ion-item>
-      <div padding>
-        <button ion-button color="success" block (click)="ceklupa()">Kirim</button>
-      </div>
-    </ion-list>
-  </ion-content>
   
+      <ion-buttons style="text-align: center; margin-top: 10px">
+        <button ion-button color="primary" style="text-transform: none" (click)="ceklupa()">Kirim</button>
+      </ion-buttons>
+    </div>
+  
+</ion-content>

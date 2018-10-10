@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title style="margin-left: -12px">Create Post</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-item no-lines>
+            <ion-label stacked>Judul</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item no-lines>
+            <ion-label stacked>Kategori</ion-label>
+            <ion-select interface="popover">
+                <ion-option ion-item>Kategori 1</ion-option>
+                <ion-option ion-item>Kategori 2</ion-option>
+                <ion-option ion-item>Kategori 3</ion-option>
+                <ion-option ion-item>Kategori 4</ion-option>
+                <ion-option ion-item>Kategori 5</ion-option>
+                <ion-option ion-item>Kategori 6</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item no-lines >
+            <img src="antrian_sample_image/placeholder1.png" style="max-height: 150px">
+        </ion-item>
+
+        <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-image-outline" style="zoom:1.6 ; padding-right: 5px"></ion-icon>Dari Album
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button full style="text-transform: none ; text-align: center">
+                            <ion-icon name="ios-camera-outline" style="zoom:1.8 ; padding-right: 5px" ></ion-icon>Ambil Foto
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        <ion-item>
+            <ion-label stacked>Diskripsi Post</ion-label>
+            <ion-textarea rows="12"></ion-textarea>
+        </ion-item>
+    </div>
+</ion-content>

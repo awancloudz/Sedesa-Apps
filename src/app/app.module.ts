@@ -18,12 +18,12 @@ import { OneSignal } from '@ionic-native/onesignal';
 // Mengambil SEMUA halaman yg sudah dibuat
 import { MyApp } from './app.component';
 import { HomePage,HomePageKategori } from '../pages/home/home';
-import { InformasiPage,InformasiAllPage,InformasiUserPage,DetailInformasiPage, KomentarPage } from '../pages/informasi/informasi';
+import { InformasiPage, InformasiAllPage, InformasiUserPage, DetailInformasiPage, KomentarPage, InformasiCreatePage } from '../pages/informasi/informasi';
 import { UsulanPage,UsulandetailPage,UsulancreatePage,UsulaneditPage } from '../pages/usulan/usulan';
 import { UsulanDusunPage,UsulanDusundetailPage } from '../pages/usulandusun/usulandusun';
 import { BeritaPage,BeritaDusunPage,BeritaDetailPage } from '../pages/berita/berita';
 import { PengaduanPage,PengaduandetailPage,PengaduancreatePage,PengaduaneditPage } from '../pages/pengaduan/pengaduan';
-import { AntrianPage } from '../pages/antrian/antrian';
+import { AntrianPage, AntriancreatePage, AntrianrealtimePage } from '../pages/antrian/antrian';
 import { ProfilePage } from '../pages/profile/profile';
 import { SettingPage } from '../pages/setting/setting';
 import { LoginPage,DaftarPage,ForgotPage } from '../pages/login/login';
@@ -99,24 +99,19 @@ import { InformasiserviceProvider } from '../providers/informasiservice/informas
   //Komponen Aplikasi
   entryComponents: [
     MyApp,
-    HomePage,HomePageKategori,
-    InformasiPage,InformasiAllPage,InformasiUserPage,DetailInformasiPage,KomentarPage,
+    HomePage, HomePageKategori,
+    InformasiPage, InformasiAllPage, InformasiUserPage, DetailInformasiPage, KomentarPage, InformasiCreatePage,
     UsulanPage,
-    UsulandetailPage,
-    UsulancreatePage,
-    UsulaneditPage,
-    UsulanDusunPage,
-    UsulanDusundetailPage,
-    BeritaPage,
-    BeritaDusunPage,BeritaDetailPage,
+    UsulandetailPage, UsulancreatePage, UsulaneditPage, UsulanDusunPage, UsulanDusundetailPage,
+    BeritaPage, BeritaDusunPage, BeritaDetailPage,
     ProfilePage,
     SettingPage,
-    LoginPage,DaftarPage,ForgotPage,
+    LoginPage, DaftarPage, ForgotPage,
     ProfildesaPage,
-    PengaduanPage,PengaduandetailPage,PengaduancreatePage,PengaduaneditPage,
-    AntrianPage,
+    PengaduanPage, PengaduandetailPage, PengaduancreatePage, PengaduaneditPage,
+    AntrianPage, AntriancreatePage, AntrianrealtimePage,
     LocationSelectPage,
-    BelanjaPage
+    BelanjaPage,
   ],
   //Service Provider
   providers: [

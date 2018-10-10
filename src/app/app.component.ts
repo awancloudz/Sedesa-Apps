@@ -5,19 +5,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
 // Mengambil halaman UTAMA yg sudah dibuat
-import { HomePage,HomePageKategori } from '../pages/home/home';
-import { UsulanPage } from '../pages/usulan/usulan';
+import { HomePage, HomePageKategori } from '../pages/home/home';
+import { UsulanPage, UsulancreatePage, UsulaneditPage, UsulandetailPage } from '../pages/usulan/usulan';
 import { UsulanDusunPage } from '../pages/usulandusun/usulandusun';
-import { BeritaPage } from '../pages/berita/berita';
+import { BeritaPage, BeritaDusunPage, BeritaDetailPage } from '../pages/berita/berita';
 import { ProfilePage } from '../pages/profile/profile';
 import { SettingPage } from '../pages/setting/setting';
-import { LoginPage} from '../pages/login/login';
+import { LoginPage, ForgotPage, DaftarPage} from '../pages/login/login';
 import { ProfildesaPage} from '../pages/profildesa/profildesa';
-import { PengaduanPage} from '../pages/pengaduan/pengaduan';
-import { AntrianPage} from '../pages/antrian/antrian';
+import { PengaduanPage, PengaduancreatePage, PengaduaneditPage, PengaduandetailPage} from '../pages/pengaduan/pengaduan';
+import { AntrianPage, AntriancreatePage, AntrianrealtimePage} from '../pages/antrian/antrian';
 import { LocationSelectPage } from '../pages/location-select/location-select';
 import { BelanjaPage } from '../pages/belanja/belanja';
-import { InformasiPage } from '../pages/informasi/informasi';
+import { InformasiPage, InformasiAllPage, DetailInformasiPage, InformasiUserPage, InformasiCreatePage } from '../pages/informasi/informasi';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +26,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //halaman yang pertama kali dipanggil
-  rootPage: any = HomePage;
+  rootPage: any = InformasiCreatePage;
   level = "umum";
   //Tipe Variable untuk tombol menu
   pages_login: Array<{title: string, icon: string, component: any}>;

@@ -1,29 +1,43 @@
-<!--
-  Generated template for the LoginPage page.
+<ion-content style="background-image: url('login-background.png'); background-repeat: no-repeat; background-position: center">
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-
-<ion-content padding>
-  <br><br><br>
-  <div text-center>
-    <ion-img width="275" height="100" src="logo.png" style="background-color: transparent;"></ion-img>
+  <div style="text-align: center; padding: 40px 0px">
+    <img src="logo.png" style="width: 180px; height: auto">
   </div>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text" [(ngModel)]="noktp"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
-    <div padding>
-      <a style="text-decoration: none" (click)="lupapassword()">Lupa kata sandi ?</a>
-      <button ion-button color="primary" block (click)="ceklogin()">Masuk</button>
-      <p align="center">atau</p>
-      <button ion-button color="secondary" block (click)="daftar()">Daftar</button>
-    </div>
+
+  <ion-list style="border: 2px solid #2ECC71; margin: 8px; border-radius: 10px">
+
+        <ion-item no-lines style="width: auto; margin-left: 10px; margin-right: 17px; background-color: transparent">
+          <ion-label stacked style="color: white">Username</ion-label>
+          <ion-input text-center type="text" [(ngModel)]="noktp" style="background-color: whitesmoke; border-radius: 15px; padding-left: 10px"></ion-input>
+        </ion-item>
+    
+        <ion-item no-lines style="width: auto; margin-left: 10px; margin-right: 17px; background-color: transparent">
+          <ion-label stacked style="color: white">Password</ion-label>
+          <ion-input text-center type="password" [(ngModel)]="password" style="background-color: whitesmoke; border-radius: 15px; padding-left: 10px"></ion-input>
+        </ion-item>
+    
+        <ion-buttons style="text-align: center; margin-top: 10px; margin-bottom: 10px">
+            <button ion-button style="text-transform: none; border-radius: 5px; width: 80px" (click)="ceklogin()">Login</button>
+        </ion-buttons>
+
   </ion-list>
+
+    <ion-grid style="text-align: center; margin-top: -15px">
+        <ion-row>
+          <ion-col>
+            <p style="color: white">Buat akun baru?</p>
+            <button ion-button style="text-transform: none; border-radius: 5px; width: 100px; margin-top: -10px" (click)="daftar()">Daftar Baru</button>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row style="margin-top: 10px">
+          <ion-col>
+            <div style="color: white; margin-left: 15px">Lupa password?
+            <span><button ion-button clear style="text-transform: none; color: white; margin-top: -4px; margin-left: -12px" (click)="lupapassword()"><u>Klik Disini</u></button></span>
+            </div>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+  
+
 </ion-content>

@@ -59,7 +59,7 @@ export class AntrianPage {
       });
     });
   }
-  doRefresh(refresher) {
+  /* doRefresh(refresher) {
     //console.log('Begin async operation', refresher);
     setTimeout(() => {
       this.ionViewDidLoad();
@@ -89,14 +89,17 @@ export class AntrianPage {
         loadingdata.dismiss();
       }
     );
-  }
+  } */
 
   //Action ketika tombol di klik
   tomboldetail(item) {
     //this.nav.push(PengaduandetailPage, { item: item });
   }
   tombolcreate() {
-    //this.nav.push(PengaduancreatePage);
+    this.nav.push (AntriancreatePage);
+  }
+  antrian_realtime() {
+    this.nav.push (AntrianrealtimePage);
   }
   tomboltahan(item) {
     let actionSheet = this.actionSheetCtrl.create({
@@ -165,3 +168,32 @@ export class AntrianPage {
   }
 
 }
+
+@Component({
+  templateUrl: 'antrian-create.html',
+})
+export class AntriancreatePage {
+  
+  constructor (public nav: NavController,
+              public platform: Platform,
+              public actionSheetCtrl: ActionSheetController,
+              public alertCtrl: AlertController,
+              public loadincontroller:LoadingController,
+              public antrianservice:AntrianserviceProvider,
+              public _toast:ToastController) {}
+  }
+
+
+@Component({
+  templateUrl: 'antrian-realtime.html',
+})
+export class AntrianrealtimePage {
+  
+  constructor (public nav: NavController,
+              public platform: Platform,
+              public actionSheetCtrl: ActionSheetController,
+              public alertCtrl: AlertController,
+              public loadincontroller:LoadingController,
+              public antrianservice:AntrianserviceProvider,
+              public _toast:ToastController) {}
+  }

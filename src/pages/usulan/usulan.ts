@@ -208,7 +208,7 @@ export class UsulandetailPage {
     },2)
   }
 
-  ionViewDidLoad() {
+  /* ionViewDidLoad() {
     //Loading bar
     let loadingdata=this.loadincontroller.create({
       content:"Loading..."
@@ -233,7 +233,7 @@ export class UsulandetailPage {
     });
     this.loadMap(this.item);
     
-  }
+  } */
   
   loadMap(item) {
     let mapOptions: GoogleMapOptions = {
@@ -381,7 +381,7 @@ export class UsulancreatePage {
     },2)
     }
   //Tampil data awal
-  ionViewDidLoad() {
+  /* ionViewDidLoad() {
     //Loading bar
     let loadingdata=this.loadincontroller.create({
       content:"Loading..."
@@ -412,7 +412,7 @@ export class UsulancreatePage {
       this.placesService = new google.maps.places.PlacesService(this.maps.map);
       this.searchDisabled = false;
     });
-  }
+  } */
   //Pencarian MAP
   selectPlace(place){
     //Kosongkan data

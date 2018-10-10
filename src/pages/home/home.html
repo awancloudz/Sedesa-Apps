@@ -7,30 +7,45 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-<br>
+<ion-content style="background-color: whitesmoke">
+
 <ion-slides class="desa-home-slide">
-  <ion-slide *ngFor="let item of items.daftarinformasi; let id = index">
+  <!-- <ion-slide *ngFor="let item of items.daftarinformasi; let id = index">
     <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item.foto }}" class="slide-image" style="height: 70vh; width: auto; margin: auto; display: block;"/>
-   </ion-slide>
+  </ion-slide> -->
+  <ion-slide>
+    <img src="home_slide/slide1.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="home_slide/slide2.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="home_slide/slide3.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="home_slide/slide4.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="home_slide/slide5.jpg">
+  </ion-slide>
 </ion-slides>
 
 <ion-list>
-  <ion-card>
+  <ion-card style="margin: -5px 0px -5px 0px; width: auto">
     <div>
-        <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 10px">Informasi Terbaru</ion-title>
+      <ion-title style="text-align: center; margin-top: 8px">Informasi Terbaru</ion-title>
     </div>
 
   <!-- FOR -->
-  <div *ngFor="let item2 of items.daftarposting;let id2 = index">
+  <!-- <div *ngFor="let item2 of items.daftarposting;let id2 = index">
     <div *ngIf="id2 == 0" (click)="detailinformasi(item2)">
       <ion-card>
         <ion-buttons>
           <ion-row>
             <ion-col >
-            <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item2.foto }}">
+            <img style="background-color: black" src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item2.foto }}">
             <p style="white-space: normal ; margin-top: 5px"><b>{{ item2.judul }}</b></p>
-            <p style="font-size: 12px">{{ item2.created_at }} <!--Selasa, 00 Desember 0000. Jam 00:00 WIB--></p>
+            <p style="font-size: 12px">{{ item2.created_at }}</p>
             </ion-col>
           </ion-row>
         </ion-buttons>
@@ -50,19 +65,63 @@
         </ion-row>
       </ion-buttons>
     </div>
-  </div>
+  </div> -->
+
+  <div>
+      <div (click)="detailinformasi(item2)">
+        <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
+          <ion-buttons>
+            <ion-row>
+              <ion-col>
+              <img src="home_slide/slide1.jpg">
+              <p style="white-space: normal; margin-top: 5px; line-height: 1.1"><b>Etiam pretium neque ante, dignissim auctor dolor dignissim at. Integer quis massa velit. Vivamus pharetra.</b></p>
+              <p style="font-size: 12px; color: gray">00 Januari 2018. 00:00</p>
+              </ion-col>
+            </ion-row>
+          </ion-buttons>
+        </ion-card>
+      </div>
+
+      <div (click)="detailinformasi(item2)">
+        <ion-buttons>
+          <ion-row>
+            <ion-col style="max-width: 80px">
+              <img src="home_slide/slide2.jpg" alt="Poster" style="width: 70px; height: 70px">
+            </ion-col>
+            <ion-col style="white-space: normal">
+              <p class="small-thumbnail-title"><b>Integer tempor ornare lorem, non bibendum turpis faucibus sit amet. Nam posuere ex tortor, nec</b></p>
+              <p style="font-size: 10px; color: gray">00 Februari 2018. 00:00</p>
+            </ion-col>
+          </ion-row>
+        </ion-buttons>
+      </div>
+
+      <div (click)="detailinformasi(item2)">
+          <ion-buttons>
+            <ion-row>
+              <ion-col style="max-width: 80px">
+                <img src="home_slide/slide3.jpg" alt="Poster" style="width: 70px; height: 70px">
+              </ion-col>
+              <ion-col style="white-space: normal">
+                <p class="small-thumbnail-title"><b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi ultricies</b></p>
+                <p style="font-size: 10px; color: gray">00 Maret 2018. 00:00</p>
+              </ion-col>
+            </ion-row>
+          </ion-buttons>
+        </div>
+    </div>
   <!--END FOR -->
   </ion-card>
 </ion-list>
   
-  <ion-list>
-    <ion-card>
-      <div>
-          <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 10px">Usulan Terbaru</ion-title>
-      </div>
+<ion-list>
+  <ion-card style="margin: -5px 0px -5px 0px; width: auto">
+    <div>
+      <ion-title style="text-align: center; margin-top: 8px">Usulan Terbaru</ion-title>
+    </div>
 
     <!-- FOR -->
-    <div *ngFor="let item3 of items.daftarusulan;let id3 = index">
+    <!-- <div *ngFor="let item3 of items.daftarusulan;let id3 = index">
       <div *ngIf="id3 == 0">
         <ion-card>
         <ion-buttons>
@@ -70,7 +129,7 @@
             <ion-col>
               <img src="pic.jpg">
               <p style="white-space: normal ; margin-top: 5px"><b>{{ item3.judul }}</b></p>
-              <p style="font-size: 12px">{{ item3.created_at }} <!--Selasa, 00 Desember 0000. Jam 00:00 WIB--></p>
+              <p style="font-size: 12px">{{ item3.created_at }}</p>
             </ion-col>
           </ion-row>
         </ion-buttons>
@@ -89,19 +148,63 @@
           </ion-row>
         </ion-buttons>
       </div>
-    </div>
+    </div> -->
     <!--END FOR -->
+
+    <div>
+        <div>
+          <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
+            <ion-buttons>
+              <ion-row>
+                <ion-col>
+                <img src="home_slide/slide2.jpg">
+                <p style="white-space: normal ; margin-top: 5px; line-height: 1.1"><b>Etiam pretium neque ante, dignissim auctor dolor dignissim at. Integer quis massa velit. Vivamus pharetra.</b></p>
+                <p style="font-size: 12px; color: gray">00 April 2018. 00:00</p>
+                </ion-col>
+              </ion-row>
+            </ion-buttons>
+          </ion-card>
+        </div>
+  
+        <div>
+          <ion-buttons>
+            <ion-row>
+              <ion-col style="max-width: 80px">
+                <img src="home_slide/slide3.jpg" alt="Poster" style="width: 70px; height: 70px">
+              </ion-col>
+              <ion-col style="white-space: normal">
+                <p class="small-thumbnail-title"><b>Integer tempor ornare lorem, non bibendum turpis faucibus sit amet. Nam posuere ex tortor, nec</b></p>
+                <p style="font-size: 10px; color: gray">00 Mei 2018. 00:00</p>
+              </ion-col>
+            </ion-row>
+          </ion-buttons>
+        </div>
+  
+        <div>
+            <ion-buttons>
+              <ion-row>
+                <ion-col style="max-width: 80px">
+                  <img src="home_slide/slide4.jpg" alt="Poster" style="width: 70px; height: 70px">
+                </ion-col>
+                <ion-col style="white-space: normal">
+                  <p class="small-thumbnail-title"><b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi ultricies</b></p>
+                  <p style="font-size: 10px; color: gray">00 Juni 2018. 00:00</p>
+                </ion-col>
+              </ion-row>
+            </ion-buttons>
+          </div>
+      </div>
     </ion-card>
   </ion-list>
 
-  <ion-list>
-      <ion-card>
-        <div>
-            <ion-title style="text-align: center ; margin: 0 auto ; margin-top: 10px">Pengaduan Terbaru</ion-title>
-        </div>
+<ion-list>
+  <ion-card style="margin: -5px 0px -5px 0px; width: auto">
+    <div>
+      <ion-title style="text-align: center; margin-top: 8px">Pengaduan Terbaru</ion-title>
+    </div>
 
       <!-- FOR -->
-      <div *ngFor="let item4 of items.daftarpengaduan;let id4 = index">
+      <!-- <div *ngFor="let item4 of items.daftarpengaduan;let id4 = index">
         <div *ngIf="id4 == 0">
           <ion-card>
           <ion-buttons>
@@ -109,7 +212,7 @@
               <ion-col>
                 <img src="pic.jpg">
                 <p style="white-space: normal ; margin-top: 5px"><b>{{ item4.judul }}</b></p>
-                <p style="font-size: 12px">{{ item4.created_at }}<!--Selasa, 00 Desember 0000. Jam 00:00 WIB--></p>
+                <p style="font-size: 12px">{{ item4.created_at }}</p>
               </ion-col>
             </ion-row>
           </ion-buttons>
@@ -128,47 +231,92 @@
             </ion-row>
           </ion-buttons>
         </div>
-      </div>
+      </div> -->
       <!-- END FOR -->
+
+      <div>
+          <div>
+            <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
+              <ion-buttons>
+                <ion-row>
+                  <ion-col>
+                  <img src="home_slide/slide3.jpg">
+                  <p style="white-space: normal ; margin-top: 5px; line-height: 1.1"><b>Etiam pretium neque ante, dignissim auctor dolor dignissim at. Integer quis massa velit. Vivamus pharetra.</b></p>
+                  <p style="font-size: 12px; color: gray">00 Juli 2018. 00:00</p>
+                  </ion-col>
+                </ion-row>
+              </ion-buttons>
+            </ion-card>
+          </div>
+    
+          <div>
+            <ion-buttons>
+              <ion-row>
+                <ion-col style="max-width: 80px">
+                  <img src="home_slide/slide4.jpg" alt="Poster" style="width: 70px; height: 70px">
+                </ion-col>
+                <ion-col style="white-space: normal">
+                  <p class="small-thumbnail-title"><b>Integer tempor ornare lorem, non bibendum turpis faucibus sit amet. Nam posuere ex tortor, nec</b></p>
+                  <p style="font-size: 10px; color: gray">00 Agustus 2018. 00:00</p>
+                </ion-col>
+              </ion-row>
+            </ion-buttons>
+          </div>
+    
+          <div>
+              <ion-buttons>
+                <ion-row>
+                  <ion-col style="max-width: 80px">
+                    <img src="home_slide/slide5.jpg" alt="Poster" style="width: 70px; height: 70px">
+                  </ion-col>
+                  <ion-col style="white-space: normal">
+                    <p class="small-thumbnail-title"><b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi ultricies</b></p>
+                    <p style="font-size: 10px; color: gray">00 September 2018. 00:00</p>
+                  </ion-col>
+                </ion-row>
+              </ion-buttons>
+            </div>
+        </div>
       </ion-card>
     </ion-list>
 
     <div>
-        <ion-card>
+        <ion-card style="margin: -5px 0px 0px 0px; width: auto">
           <ion-row>
             <ion-col style="max-width: 110px">
               <img src="e-commerce.png" style="width: 100px ; height: 100px">
             </ion-col>      
             <ion-col>
-              <p style="font-size: 12px"><b>Download Aplikasi Toko Desa memudahkan Warga desa bisa melakukan proses jual beli barang atau komoditas alam (perkebunan, pertanian, pertambangan, dll) antar sesama warga desa atau ke pembeli di seluruh Indonesia.</b></p>
+              <p style="font-size: 12px; font-weight: bold; text-align: justify">Download Aplikasi Toko Desa memudahkan Warga desa bisa melakukan proses jual beli barang atau komoditas alam (perkebunan, pertanian, pertambangan, dll) antar sesama warga desa atau ke pembeli di seluruh Indonesia.</p>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
-              <img src="toko_desa_playstore.png" style="height: 75px ; width: 275px ; margin: 0 auto ;">
+              <img src="toko_desa_playstore.png" style="height: 85px; width: auto; margin: 0 auto">
             </ion-col>
           </ion-row><br>
         </ion-card>
       </div>
 
-<div padding>
-  <ion-segment [(ngModel)]="home_menu" style="margin-top: -15px">
-    <ion-segment-button value="informasi" style="text-transform: none ; font-size: 13px ; margin-right: -10px">
+<ion-card style="margin: 12px 0px 10px 0px; width: auto">
+<div>
+  <ion-segment [(ngModel)]="home_menu">
+    <ion-segment-button value="informasi" style="text-transform: none; font-size: 13px">
       Informasi
     </ion-segment-button>
-    <ion-segment-button value="peranwarga" style="text-transform: none ; font-size: 13px">
+    <ion-segment-button value="peranwarga" style="text-transform: none; font-size: 13px">
       Peran Warga
     </ion-segment-button>
-    <ion-segment-button value="kependudukan" style="text-transform: none ; font-size: 13px ; margin-left: -10px">
+    <ion-segment-button value="kependudukan" style="text-transform: none; font-size: 13px">
       Kependudukan
     </ion-segment-button>
   </ion-segment>
 </div>
         
-<div padding [ngSwitch]="home_menu">
+<div [ngSwitch]="home_menu" style="margin: 10px 5px">
   <ion-list *ngSwitchCase="'informasi'">
-    <ion-row style="margin-left: -19px ; margin-top: -30px">
-      <ion-col style="margin-right: -20px" (click)="tb_wisata()">
+    <ion-row>
+      <ion-col col-4 (click)="tb_wisata()">
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="pariwisata.png" class="menu_icon">
@@ -177,7 +325,7 @@
         </ion-buttons>
       </ion-col>
         
-      <ion-col style="margin-right: -20px" (click)="tb_kuliner()">
+      <ion-col col-4 (click)="tb_kuliner()">
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="kuliner.png" class="menu_icon">
@@ -186,7 +334,7 @@
         </ion-buttons>
       </ion-col>
         
-      <ion-col style="margin-right: -17px" (click)="tb_berita()">
+      <ion-col col-4 (click)="tb_berita()">
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="berita.png" class="menu_icon">
@@ -196,8 +344,8 @@
       </ion-col>
     </ion-row>
         
-    <ion-row style="margin-left: -19px ; margin-top: -15px" (click)="tb_event()">
-      <ion-col style="margin-right: -20px">
+    <ion-row (click)="tb_event()">
+      <ion-col col-4>
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="event.png" class="menu_icon">
@@ -206,7 +354,7 @@
         </ion-buttons>
       </ion-col>
         
-      <ion-col style="margin-right: -20px" (click)="tb_investasi()">
+      <ion-col col-4 (click)="tb_investasi()">
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="investasi.png" class="menu_icon">
@@ -215,11 +363,11 @@
         </ion-buttons>
       </ion-col>
         
-      <ion-col style="margin-right: -17px" (click)="tb_harga()">
+      <ion-col col-4 (click)="tb_harga()">
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="harga_pangan.png" class="menu_icon">
-            <p style="text-transform: none; margin-top: 9px; text-align: center; line-height: 1.0"><b>Harga Pangan</b></p>
+            <p style="text-transform: none; margin: 9px 2px 0px 2px; text-align: center; line-height: 1.0"><b>Harga Pangan</b></p>
           </ion-card>
         </ion-buttons>
       </ion-col>
@@ -227,8 +375,8 @@
   </ion-list>
 
   <ion-list *ngSwitchCase="'peranwarga'">
-    <ion-row style="margin-left: -19px ; margin-top: -30px">
-      <ion-col style="margin-right: -20px">
+    <ion-row>
+      <ion-col col-4>
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="posting.png" class="menu_icon">
@@ -237,7 +385,7 @@
         </ion-buttons>
       </ion-col>
         
-      <ion-col style="margin-right: -20px">
+      <ion-col col-4>
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="usulan.png" class="menu_icon">
@@ -246,7 +394,7 @@
         </ion-buttons>
       </ion-col>
         
-      <ion-col style="margin-right: -17px">
+      <ion-col col-4>
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="pengaduan.png" class="menu_icon">
@@ -256,24 +404,24 @@
       </ion-col>
     </ion-row>
 
-    <ion-row style="margin-left: -19px ; margin-top: -15px; height: 145px">
-      <ion-col style="margin-right: -20px">
+    <ion-row style="height: 125px">
+      <ion-col col-4>
           
       </ion-col>
           
-      <ion-col style="margin-right: -20px">
+      <ion-col col-4>
           
       </ion-col>
           
-      <ion-col style="margin-right: -17px">
+      <ion-col col-4>
           
       </ion-col>
     </ion-row>
   </ion-list>
   
   <ion-list *ngSwitchCase="'kependudukan'">
-    <ion-row style="margin-left: -19px ; margin-top: -30px">
-      <ion-col style="margin-right: -20px">
+    <ion-row>
+      <ion-col col-4>
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="layanan.png" class="menu_icon">
@@ -282,7 +430,7 @@
         </ion-buttons>
       </ion-col>
             
-      <ion-col style="margin-right: -20px">
+      <ion-col col-4>
         <ion-buttons>
           <ion-card class="menu_card">
             <img src="pemetaan.png" class="menu_icon">
@@ -291,24 +439,25 @@
         </ion-buttons>
       </ion-col>
             
-      <ion-col style="margin-right: -17px">
+      <ion-col col-4>
                   
       </ion-col>
     </ion-row>
 
-    <ion-row style="margin-left: -19px; margin-top: -15px; height: 145px">
-      <ion-col style="margin-right: -20px">
+    <ion-row style="height: 125px">
+      <ion-col col-4>
           
       </ion-col>
           
-      <ion-col style="margin-right: -20px">
+      <ion-col col-4>
           
       </ion-col>
           
-      <ion-col style="margin-right: -17px">
+      <ion-col col-4>
           
       </ion-col>
     </ion-row>
   </ion-list>
 </div>
+</ion-card>
 </ion-content>

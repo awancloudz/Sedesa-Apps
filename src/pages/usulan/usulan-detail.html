@@ -3,11 +3,24 @@
 
     <ion-title style="margin-left: -12px">Detail Usulan</ion-title>
 
+    <ion-buttons start>
+        <button ion-button (click)="tomboledit(item)" icon-only style="margin-right: 5px">
+            <ion-icon name="create"></ion-icon>
+        </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+        <button ion-button (click)="tombolhapus(item)" icon-only>
+            <ion-icon name="trash"></ion-icon>
+          </button>
+    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>{{ item.judul }}</h3>
+<ion-content style="background-color: whitesmoke">
+
+  <!-- <h3>{{ item.judul }}</h3>
   <p><b>Tanggal : </b>{{ item.tanggal }}</p>
   <p><b>Kategori :</b> {{ item.kategori.namakategori }}</p>
   <p><b>Lokasi</b></p>
@@ -28,18 +41,165 @@
   <p><b>Detail Usulan</b> </p>
   <p>{{ item.deskripsi }}</p>  
   <p><b>Proposal</b></p>
+  
   <ion-slides pager>
     <ion-slide *ngFor="let photo2 of item.proposalusulan">
-      <img style="height: 70vh; width: auto; margin: auto; display: block;" src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fileupload/{{photo2.file}}" class="slide-image">
+      <img style="height: 70vh; width: auto; margin: auto; display: block;" src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fileupload/{{photo2.file}}">
+    </ion-slide>
+  </ion-slides> -->
+<ion-card style="margin: 2px 0px 8px 0px; width: auto">
+  <ion-grid>
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Judul</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+        <p><b>:</b></p>
+      </ion-col>
+      <ion-col>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar aliquam erat, vitae efficitur nulla faucibus sed.</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Tanggal</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+          <p><b>:</b></p>
+        </ion-col>
+      <ion-col>
+        <p>00 Januari 2018</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Kategori</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+          <p><b>:</b></p>
+        </ion-col>
+      <ion-col>
+        <p>Neque porro quisquam</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p style="font-weight: bold; text-align: center; margin: 5px 0px">Lokasi</p>
+  <div style="height: 50%;background-color: rgba(0, 0, 0, 0);" id="map_canvas"></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Keterangan Lokasi</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+        <p><b>:</b></p>
+      </ion-col>
+      <ion-col>
+        <p>Aenean interdum</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-card>
+
+<ion-card style="margin: 8px 0px; width: auto">
+  <p style="font-weight: bold; text-align: center; margin: 5px 0px">Foto</p>
+  <ion-slides pager>
+    <ion-slide>
+      <img style="height: 70vh; width: auto; margin: auto; display: block;" src="home_slide/slide1.jpg" >
     </ion-slide>
   </ion-slides>
-</ion-content>
-<ion-fab bottom right>
-  <button ion-fab color="primary" style="margin-bottom:10px" (click)="tomboledit(item)">
-      <ion-icon name="create" style="zoom:1.3"></ion-icon>
-  </button>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Volume</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+        <p><b>:</b></p>
+      </ion-col>
+      <ion-col>
+        <p>100</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Satuan</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+        <p><b>:</b></p>
+      </ion-col>
+      <ion-col>
+        <p>orang</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
 
-  <button ion-fab color="primary" (click)="tombolhapus(item)">
-    <ion-icon name="trash" style="zoom:1.3"></ion-icon>
-  </button>
-</ion-fab>
+<ion-card style="margin: 8px 0px; width: auto">
+  <p style="font-weight: bold; font-size: 18px; text-align: center; margin: 5px 0px">Penerima Manfaat</p>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Laki-laki</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+        <p><b>:</b></p>
+      </ion-col>
+      <ion-col>
+        <p>30</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Wanita</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+        <p><b>:</b></p>
+      </ion-col>
+      <ion-col>
+        <p>70</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Rumah Tangga Miskin</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+        <p><b>:</b></p>
+      </ion-col>
+      <ion-col>
+        <p>200</p>
+      </ion-col>
+    </ion-row>
+      
+    <ion-row>
+      <ion-col style="max-width: 120px">
+        <p><b>Detail Usulan</b></p>
+      </ion-col>
+      <ion-col style="max-width: 15px">
+        <p><b>:</b></p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="margin-top: -7px">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar aliquam erat, vitae efficitur nulla faucibus sed. Sed lobortis posuere ex, faucibus mollis arcu aliquet eget. Fusce facilisis ut quam suscipit rutrum. Etiam mauris ante, condimentum ac interdum et, blandit sit amet tortor. Quisque eleifend rhoncus nisl non vehicula. Praesent quis ipsum ac eros vestibulum maximus. Curabitur aliquam bibendum ante, id consequat eros sodales a. Aliquam tempus massa vitae fermentum aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum in fermentum ligula, eget gravida elit. Vivamus quis orci vitae velit elementum porttitor id nec ligula.</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-card>
+
+<ion-card style="margin: 8px 0px; width: auto">
+    <p style="font-weight: bold; font-size: 18px; text-align: center; margin: 5px 0px">Proposal</p>
+  <ion-slides pager>
+    <ion-slide>
+      <img style="height: 70vh; width: auto; margin: auto; display: block;" src="home_slide/slide1.jpg">
+    </ion-slide>
+  </ion-slides>
+</ion-card>
+
+</ion-content>

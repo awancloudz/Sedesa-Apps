@@ -188,8 +188,13 @@ export class InformasiUserPage {
       }
     });
   }
+
   detailinformasi(item){
     this.navCtrl.push(DetailInformasiPage, { item: item});
+  }
+
+  createpost () {
+    this.navCtrl.push (InformasiCreatePage);
   }
 }
 
@@ -212,7 +217,7 @@ export class DetailInformasiPage {
     },2)
   }
 
-  ionViewDidLoad(item) {
+  /* ionViewDidLoad(item) {
     //Loading bar
     let loadingdata=this.loadincontroller.create({
       content:"Loading..."
@@ -242,7 +247,7 @@ export class DetailInformasiPage {
           loadingdata.dismiss();
         }
     );
-  }
+  } */
 
   tombolkomentar(item) {
     this.navCtrl.push (KomentarPage,{item: item})
@@ -339,4 +344,19 @@ export class KomentarPage {
     );
   }
 
+}
+
+@Component({
+  selector: 'komentarPage',
+  templateUrl: 'informasi-create.html',
+})
+export class InformasiCreatePage {
+
+  constructor ( public navCtrl: NavController,
+                public navParams: NavParams,
+                public loadincontroller:LoadingController,
+                public informasiservice:InformasiserviceProvider,
+                public alertCtrl: AlertController,
+                params: NavParams) {
+              }
 }
