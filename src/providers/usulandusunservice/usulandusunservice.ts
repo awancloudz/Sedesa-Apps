@@ -20,7 +20,7 @@ export class UsulandusunserviceProvider {
   //Deklarasi variabel
   private items:UsulanDusunArray[]=[];
   //Memanggil URL Api
-  private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/usulandusun";
+  private url:string="http://sedesa.id/api/usulandusun";
   constructor(public _http: Http) {
   }
 

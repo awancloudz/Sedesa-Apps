@@ -20,9 +20,9 @@ export class LoginserviceProvider {
   //Deklarasi variabel
   private items:LoginArray[]=[];
   //Memanggil URL Api
-  private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/loginuser";
-  private url2:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/daftaruser";
-  private url3:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/resetpassword";
+  private url:string="http://sedesa.id/api/loginuser";
+  private url2:string="http://sedesa.id/api/daftaruser";
+  private url3:string="http://sedesa.id/api/resetpassword";
   constructor(public _http: Http) {
   }
 

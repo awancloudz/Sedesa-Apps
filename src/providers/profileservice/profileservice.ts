@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ProfileserviceProvider {
   private items:ProfileArray[]=[];
-  private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/warga";
+  private url:string="http://sedesa.id/api/warga";
   constructor(public _http: Http) {
   }
 

@@ -10,10 +10,11 @@
 <ion-content style="background-color: whitesmoke">
 
 <ion-slides class="desa-home-slide">
-  <!-- <ion-slide *ngFor="let item of items.daftarinformasi; let id = index">
-    <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item.foto }}" class="slide-image" style="height: 70vh; width: auto; margin: auto; display: block;"/>
-  </ion-slide> -->
-  <ion-slide>
+  <ion-slide *ngFor="let item of items.daftarinformasi; let id = index">
+    <img src="http://sedesa.id/cms/img/slider/{{ item.foto }}" class="slide-image"/>
+    <!-- style="height: 70vh; width: auto; margin: auto; display: block;" -->
+  </ion-slide>
+  <!-- <ion-slide>
     <img src="home_slide/slide1.jpg">
   </ion-slide>
   <ion-slide>
@@ -27,7 +28,7 @@
   </ion-slide>
   <ion-slide>
     <img src="home_slide/slide5.jpg">
-  </ion-slide>
+  </ion-slide> -->
 </ion-slides>
 
 <ion-list>
@@ -37,15 +38,15 @@
     </div>
 
   <!-- FOR -->
-  <!-- <div *ngFor="let item2 of items.daftarposting;let id2 = index">
+  <div *ngFor="let item2 of items.daftarposting;let id2 = index">
     <div *ngIf="id2 == 0" (click)="detailinformasi(item2)">
-      <ion-card>
+      <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
         <ion-buttons>
           <ion-row>
             <ion-col >
-            <img style="background-color: black" src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item2.foto }}">
-            <p style="white-space: normal ; margin-top: 5px"><b>{{ item2.judul }}</b></p>
-            <p style="font-size: 12px">{{ item2.created_at }}</p>
+            <img style="background-color: black" src="http://sedesa.id/fotoupload/{{ item2.foto }}">
+            <p style="white-space: normal; margin-top: 5px; line-height: 1.1"><b>{{ item2.judul }}</b></p>
+            <p style="font-size: 12px; color: gray">{{ item2.created_at }}</p>
             </ion-col>
           </ion-row>
         </ion-buttons>
@@ -56,18 +57,18 @@
       <ion-buttons>
         <ion-row>
           <ion-col style="max-width: 80px">
-            <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item2.foto }}" alt="Poster" style="width: 70px ; height: 70px">
+            <img src="http://sedesa.id/fotoupload/{{ item2.foto }}" alt="Poster" style="width: 70px ; height: 70px">
           </ion-col>
           <ion-col style="white-space: normal">
-            <p style="font-size: 12px"><b>{{ item2.judul }}</b></p>
-            <p style="font-size: 10px">{{ item2.created_at }}</p>
+            <p class="small-thumbnail-title"><b>{{ item2.judul }}</b></p>
+            <p style="font-size: 10px; color: gray">{{ item2.created_at }}</p>
           </ion-col>
         </ion-row>
       </ion-buttons>
     </div>
-  </div> -->
+  </div>
 
-  <div>
+  <!-- <div>
       <div (click)="detailinformasi(item2)">
         <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
           <ion-buttons>
@@ -109,7 +110,7 @@
             </ion-row>
           </ion-buttons>
         </div>
-    </div>
+    </div> -->
   <!--END FOR -->
   </ion-card>
 </ion-list>
@@ -121,15 +122,15 @@
     </div>
 
     <!-- FOR -->
-    <!-- <div *ngFor="let item3 of items.daftarusulan;let id3 = index">
+    <div *ngFor="let item3 of items.daftarusulan;let id3 = index">
       <div *ngIf="id3 == 0">
-        <ion-card>
+        <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
         <ion-buttons>
           <ion-row>
             <ion-col>
               <img src="pic.jpg">
-              <p style="white-space: normal ; margin-top: 5px"><b>{{ item3.judul }}</b></p>
-              <p style="font-size: 12px">{{ item3.created_at }}</p>
+              <p style="white-space: normal ; margin-top: 5px; line-height: 1.1"><b>{{ item3.judul }}</b></p>
+              <p style="font-size: 12px; color: gray">{{ item3.created_at }}</p>
             </ion-col>
           </ion-row>
         </ion-buttons>
@@ -142,16 +143,16 @@
               <img src="pic.jpg" alt="Poster" style="width: 70px ; height: 70px">
             </ion-col>
             <ion-col style="white-space: normal">
-              <p style="font-size: 12px"><b>{{ item3.judul }}</b></p>
-              <p style="font-size: 10px">{{ item3.created_at }}</p>
+              <p class="small-thumbnail-title"><b>{{ item3.judul }}</b></p>
+              <p style="font-size: 10px; color: gray">{{ item3.created_at }}</p>
             </ion-col>
           </ion-row>
         </ion-buttons>
       </div>
-    </div> -->
+    </div>
     <!--END FOR -->
 
-    <div>
+    <!-- <div>
         <div>
           <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
             <ion-buttons>
@@ -193,7 +194,7 @@
               </ion-row>
             </ion-buttons>
           </div>
-      </div>
+      </div> -->
     </ion-card>
   </ion-list>
 
@@ -204,15 +205,15 @@
     </div>
 
       <!-- FOR -->
-      <!-- <div *ngFor="let item4 of items.daftarpengaduan;let id4 = index">
+      <div *ngFor="let item4 of items.daftarpengaduan;let id4 = index">
         <div *ngIf="id4 == 0">
-          <ion-card>
+          <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
           <ion-buttons>
             <ion-row>
               <ion-col>
                 <img src="pic.jpg">
-                <p style="white-space: normal ; margin-top: 5px"><b>{{ item4.judul }}</b></p>
-                <p style="font-size: 12px">{{ item4.created_at }}</p>
+                <p style="white-space: normal ; margin-top: 5px; line-height: 1.1"><b>{{ item4.judul }}</b></p>
+                <p style="font-size: 12px; color: gray">{{ item4.created_at }}</p>
               </ion-col>
             </ion-row>
           </ion-buttons>
@@ -225,16 +226,16 @@
                 <img src="pic.jpg" alt="Poster" style="width: 70px ; height: 70px">
               </ion-col>
               <ion-col style="white-space: normal">
-                <p style="font-size: 12px"><b>{{ item4.judul }}</b></p>
-                <p style="font-size: 10px">{{ item4.created_at }}</p>
+                <p class="small-thumbnail-title"><b>{{ item4.judul }}</b></p>
+                <p style="font-size: 10px; color: gray">{{ item4.created_at }}</p>
               </ion-col>
             </ion-row>
           </ion-buttons>
         </div>
-      </div> -->
+      </div>
       <!-- END FOR -->
 
-      <div>
+      <!-- <div>
           <div>
             <ion-card style="width: auto; margin-left: 7px; margin-right: 7px">
               <ion-buttons>
@@ -276,7 +277,7 @@
                 </ion-row>
               </ion-buttons>
             </div>
-        </div>
+        </div> -->
       </ion-card>
     </ion-list>
 

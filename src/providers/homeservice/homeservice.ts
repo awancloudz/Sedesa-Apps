@@ -21,10 +21,10 @@ export class HomeserviceProvider {
   private items:HomeArray[]=[];
   private items2:UsulanArray[]=[];
   //Memanggil URL Api
-  private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/perangkat";
-  private url2:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/usulanbaru";
-  //private awal:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/halamanawal";
-  private awal:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/halamanawal";
+  private url:string="http://sedesa.id/api/perangkat";
+  private url2:string="http://sedesa.id/api/usulanbaru";
+  //private awal:string="http://sedesa.id/api/halamanawal";
+  private awal:string="http://sedesa.id/api/halamanawal";
   constructor(public _http: Http) {
   }
     //Tampilkan home

@@ -22,7 +22,7 @@
     <!-- <div padding>
       <p style="font-size: 26px ; margin-top: -5px"><b>{{ item.judul }}</b></p>
       <p style="font-size: 12px ; margin-top: -23px"><ion-icon name="md-calendar"></ion-icon> {{ item.created_at }} &nbsp;<ion-icon name="ios-contact"></ion-icon> {{ item.user.name }}</p>
-      <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item.foto }}" style="height: 50% ; width: 100%">
+      <img src="http://sedesa.id/fotoupload/{{ item.foto }}" style="height: 50% ; width: 100%">
       <div [innerHtml]="item.isipost" align="justify"></div>
     </div>
 
@@ -34,21 +34,24 @@
     </ion-row> -->
 
   <div style="line-height: 1.1">
-      <p style="font-size: 12px; color: gray; margin: 10px 5px; text-align: right">00 Januari 2018. 00:00</p>
-    <p style="font-size: 24px; margin: 5px"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin.</b></p>
-    <p style="font-size: 12px; color: gray; margin: 0px 5px 15px 5px">Username<span>  .  </span>Nama Kategori</p>
-    <img src="home_slide/slide5.jpg" style="height: 50% ; width: 100%">
+    <!-- <p style="font-size: 12px; color: gray; margin: 10px 5px; text-align: right">{{ item.created_at }}</p> -->
+    <img src="http://sedesa.id/fotoupload/{{ item.foto }}" style="height: 50% ; width: 100%">
+    <p style="font-size: 24px; margin: 15px"><b>{{ item.judul }}</b></p><hr>
+    <!-- <p style="font-size: 12px; color: gray; margin: 0px 10px 15px 5px">{{ item.user.name }}<span>  |  </span> {{ item.kategoripost.namakategori }}</p> -->
+    <p style="font-size: 12px; color: gray; margin: 15px; text-align: left">{{ item.user.name }}<span>  |  </span> {{ item.kategoripost.namakategori }}
+    <br>{{ item.created_at }}</p>
+    <!-- <p style="font-size: 12px; color: gray; margin: 15px; text-align: left">{{ item.created_at }}</p> -->
   </div>
 
-  <div>
-    <p style="text-align: left; margin: 5px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tellus porttitor rutrum suscipit. Nunc quis pretium mauris. In egestas massa felis, ac accumsan lectus pharetra ut. Proin sodales, enim sit amet elementum auctor, eros elit ultrices sapien, nec porta velit erat quis quam. Phasellus vitae ante magna. Integer in faucibus tortor. Praesent at hendrerit libero. Proin rutrum maximus urna quis cursus. Vivamus a tortor convallis, iaculis ex id, sagittis ante. Maecenas et purus neque. Maecenas eu neque congue, commodo erat vel, imperdiet velit. Morbi orci lacus, viverra ac orci non, mollis feugiat orci. Sed sed neque eu lorem suscipit ornare quis id elit. Sed semper tortor metus, vitae varius odio pellentesque tincidunt.
-          Suspendisse leo magna, venenatis in dictum euismod, sagittis condimentum sapien. Vivamus magna elit, dictum sed feugiat sed, feugiat non tortor. Aenean ac ornare felis, at volutpat velit. Cras tempor ut enim a accumsan. Vestibulum quis ante id ipsum dapibus commodo. Aenean egestas fringilla ante et gravida. Fusce maximus nisi sit amet nisl dapibus, nec vehicula erat tempor. Ut fermentum orci non turpis dignissim mollis at nec est.</p>
-  </div>
-  
+  <!-- <div>
+    <p style="text-align: left; margin: 5px">
+    </p>
+  </div> -->
+  <div [innerHtml]="item.isipost" style="text-align: left; margin: 15px"></div>
   <ion-row>
     <ion-col style="text-align: center">
       <button ion-button outline style="text-transform: none ; border-radius: 20px" color="dark" (click)="tombolkomentar(item)">
-        <i class="fa fa-commenting-o" aria-hidden="true" style="margin-top: -5px ; padding-right: 10px ; font-size: 25px"></i>100 Komentar</button>
+        <i class="fa fa-commenting-o" aria-hidden="true" style="margin-top: -5px ; padding-right: 10px ; font-size: 25px"></i>{{ items.jumlahkomentar }} Komentar</button>
     </ion-col> 
   </ion-row>
 </ion-content>

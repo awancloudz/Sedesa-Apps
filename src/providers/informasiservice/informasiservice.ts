@@ -19,8 +19,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class InformasiserviceProvider {
   private items:InformasiArray[]=[];
-  //private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/informasi";
-  private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/informasi";
+  //private url:string="http://sedesa.id/api/informasi";
+  private url:string="http://sedesa.id/api/informasi";
   constructor(public _http: Http) {
     
   }

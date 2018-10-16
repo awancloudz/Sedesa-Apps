@@ -22,7 +22,7 @@
     <ion-item (click)="detailinformasi(item)" *ngFor="let item of items.koleksi">
       <ion-row>
         <ion-col style="max-width: 100px ; max-height: 100px">
-          <img src="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/fotoupload/{{ item.foto }}" alt="Poster" style="height: 100px ; max-width: 100px">
+          <img src="http://sedesa.id/fotoupload/{{ item.foto }}" alt="Poster" style="height: 100px ; max-width: 100px">
         </ion-col>
       
         <ion-col style="white-space: normal ; padding-left: 15px">
@@ -35,21 +35,21 @@
   </ion-list> -->
 
   <ion-list>
-    <ion-card style="margin: 5px 0px; width: auto">
+    <ion-card style="margin: 5px 0px; width: auto" (click)="detailinformasi(item)" *ngFor="let item of items.koleksi">
       <ion-row>
         <ion-col style="max-width: 110px">
-          <img src="home_slide/slide1.jpg" class="informasi-img">
+          <img src="http://sedesa.id/fotoupload/{{ item.foto }}" class="informasi-img">
         </ion-col>
         
         <ion-col>
-          <p class="informasi-thumbnail-title">Etiam pretium neque ante, dignissim auctor dolor dignissim at. Integer quis massa velit. Vivamus pharetra</p>
-          <p style="font-size: 12px; color: gray; line-height: 1.1">Username<span>   .   </span><span>Nama Kategori</span></p>
-          <p style="font-size: 12px; color: gray; line-height: 1.1">00 Januari 2018. 00:00</p>
+          <p class="informasi-thumbnail-title">{{ item.judul }}</p>
+          <p style="font-size: 12px; color: gray; line-height: 1.1">{{ item.user.name }}<span>   |   </span><span>{{ item.kategoripost.namakategori }}</span></p>
+          <p style="font-size: 12px; color: gray; line-height: 1.1">{{ item.created_at }}</p>
         </ion-col>
       </ion-row>
     </ion-card>
 
-      <ion-card style="margin: 5px 0px; width: auto">
+      <!-- <ion-card style="margin: 5px 0px; width: auto">
         <ion-row>
           <ion-col style="max-width: 110px">
             <img src="home_slide/slide2.jpg" class="informasi-img">
@@ -75,8 +75,8 @@
               <p style="font-size: 12px; color: gray; line-height: 1.1">00 Januari 2018. 00:00</p>
             </ion-col>
           </ion-row>
-        </ion-card>
-      </ion-list>
+        </ion-card> -->
+    </ion-list>
 </ion-content>
 
       <ion-fab bottom right>

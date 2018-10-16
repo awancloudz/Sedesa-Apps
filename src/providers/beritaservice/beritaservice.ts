@@ -13,8 +13,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class BeritaserviceProvider {
   private items:BeritaArray[]=[];
-  private url:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/berita";
-  private url2:string="http://desa-motivadeadev770011.codeanyapp.com/website-admin-desa/public/api/beritahasil";
+  private url:string="http://sedesa.id/api/berita";
+  private url2:string="http://sedesa.id/api/beritahasil";
   constructor(public _http: Http) {}
 
   tampilkanberita(iddesa)

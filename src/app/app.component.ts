@@ -26,7 +26,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //halaman yang pertama kali dipanggil
-  rootPage: any = InformasiCreatePage;
+  rootPage: any = HomePage;
   level = "umum";
   //Tipe Variable untuk tombol menu
   pages_login: Array<{title: string, icon: string, component: any}>;
